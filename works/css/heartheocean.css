@@ -1,0 +1,254 @@
+article {
+    margin-top: 65px;
+}
+
+.title {
+    font-size: 66px;
+    color: #ffffff;
+    font-weight: 900;
+    line-height: 80px;
+    text-align: center;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Noto Sans,ui-sans-serif,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,Arial;
+}
+
+.title span {
+    color: #37FF8B;
+}
+
+.backtotop {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 10%;
+    z-index: 999;
+}
+
+.backtotop button {
+    display: flex;
+    align-items: center;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: #ababab;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    background: 0 0;
+    overflow-y: visible;
+    animation: top-to-left 1s ease;
+    transition: all 1s ease;
+}
+
+.backtotop button:hover {
+    color: #ffffff;
+}
+
+@keyframes top-to-left {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.backtotop button span svg path {
+    transform: scale(2.5);
+}
+
+@keyframes left-move {
+    0% {
+        transform: translate(500px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+
+.body-container {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    margin: 50px 0;
+}
+
+.body-container .body-overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0 50px;
+    margin: 0px auto;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.body-container .body-overview h1 {
+    margin: 10px 0 20px;
+    height: 66px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.body-container .body-overview h1 span {
+    display: block;
+    color: #38ff8b;
+    font-weight: 900;
+    font-size: 1.25em;
+    line-height: 66px;
+    z-index: 2;
+    text-align: center;
+}
+
+.body-container .body-overview h3 span {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.05em;
+    line-height: 42px;
+    z-index: 2;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.body-container .body-overview .boch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 95%;
+    background-color: transparent;
+    overflow: visible;
+}
+
+.body-container .body-overview .boch .image-box {
+    height: 400px;
+    width: 100%;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.body-container .body-overview .boch .image-box .image-0 {
+    height: 100%;
+    width: 60%;
+    margin: 0 0 0 calc(20%);
+    background-image: url(../materials/logo1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .boch .image-box .image-00 {
+    height: 100%;
+    width: 60%;
+    margin: 0 0 0 calc(20%);
+    background-image: url(../materials/logo7.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .boch .image-box .image-000 {
+    height: 100%;
+    width: 60%;
+    margin: 0 0 0 calc(20%);
+    background-image: url(../materials/logo8.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .boch .image-box .image-1 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../materials/heartheocean1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .boch .image-box .image-2 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../materials/heartheocean4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .boch .image-box .image-3 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../materials/heartheocean5.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .boch .image-box .image-4 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../materials/heartheocean6.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .boch .image-box .image-5 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../materials/award7.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .mingcheng {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.body-container .body-overview .mingcheng p {
+    margin: 10px 0;
+}
+
+.body-container .body-overview .mingcheng1 {
+    font-size: 1.35em;
+    font-weight: 700;
+    line-height: 3em;
+    color: #38ff8b;
+}
+
+.body-container .body-overview .mingcheng2 {
+    font-size: 1.15em;
+    line-height: 2em;
+    font-weight: 500;
+}
+
+.body-container .body-overview .mingcheng3 {
+    font-size: 1.15em;
+    line-height: 2em;
+    font-weight: 500;
+    padding-top: 50px;
+}
+
+.body-container .body-overview .mingcheng4 {
+    padding-top: 50px;
+    font-size: 1.25em;
+    font-weight: 500;
+    text-align: right;
+}
+
+.body-container .body-overview .mingcheng5 {
+    font-size: 1.35em;
+    font-weight: 700;
+    line-height: 3em;
+    color: #38ff8b;
+    text-align: center;
+}
