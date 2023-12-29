@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?ulcmfs');
+    src: url('../fonts/icomoon.eot?ulcmfs#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?ulcmfs') format('truetype'), url('../fonts/icomoon.woff?ulcmfs') format('woff'), url('../fonts/icomoon.svg?ulcmfs#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+html {
+    overflow: -moz-hidden-unscrollable;
+    height: 100%;
+    /* filter: grayscale(1); */
+}
+
+body::-webkit-scrollbar {
+display: none;
+}
+
+body {
+    background-color: #0d1013;
+    -ms-overflow-style: none;
+    height: 100%;
+    width: calc(100vw + 18px);
+    overflow: auto;
+    font-family: Consolas,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Noto Sans,ui-sans-serif,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,Arial;
+
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #5b6edb;
+}
+
+.container {
+    background-color: #0d1013;
+}
+
+.navbar {
+    border-bottom: 2px solid #1f2124;
+}
+
+.relative {
+    position: relative;
+}
+
+.navbar-brand {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+  
+.button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 1.32rem;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: Consolas,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Noto Sans,ui-sans-serif,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,Arial;
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+  
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+  
+.button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 12px var(--animation-color))
+}
+
+.navbar-expand-md .navbar-nav {
+    position: absolute;
+    right: 0;
+}
+
+.nav-item {
+    font-size: 1.1rem;
+}
+
+.fullbtn {
+    border: 0;
+    padding: 0;
+    background: none;
+}
+
+.nav-item .fullbtn svg {
+    padding: 6px;
+}
+
+.nav-item .fullbtn svg path {
+    transform: scale(2.5);
+    color: #868889;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

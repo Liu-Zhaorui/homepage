@@ -1,0 +1,114 @@
+.body-foot {
+    background-color: #0d1013;
+    padding: 40px 60px 20px 60px;
+    border-top: 2px solid #36393e;
+}
+
+.body-foot .foot-container {
+    flex: 1 1 0%;
+    position: relative;
+    border-bottom: 1px solid #5c657f;
+}
+
+.catagories .column {
+    margin: 0 40px 30px 0;
+    margin-left: calc(50% - 100px);
+    width: 180px;
+}
+
+.catagories .column>a {
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+.catagories .column a:hover {
+    color: #4a4ade;
+}
+
+.catagories .column ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.catagories .column ul li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.catagories .column ul li a {
+    display: inherit;
+}
+
+.catagories .social {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    align-items: center;
+}
+
+.catagories .column .social li {
+    position: relative;
+    display: flex;
+    margin-left: 20px;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.catagories .social li img {
+    position: absolute;
+    display: block;
+    top: -120px;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.catagories .social li:hover img {
+    width: 120px;
+    height: 120px;
+}
+
+.catagories .social li .social1::after {
+    font-family: 'icomoon';
+    content: '\e927';
+}
+
+.catagories .social li .social2::after {
+    font-family: 'icomoon';
+    content: '\e9a4';
+}
+
+.catagories .social li .social3::after {
+    font-family: 'icomoon';
+    content: '\e922';
+}
+
+.catagories .social li .social4::after {
+    font-family: 'icomoon';
+    content: '\ea84';
+}
+
+.catagories .social li .social5::after {
+    font-family: 'icomoon';
+    content: '\e903';
+}
+
+.body-foot .foot-bottom {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    color: #9aa1a7;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

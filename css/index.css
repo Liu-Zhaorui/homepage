@@ -1,0 +1,198 @@
+article {
+    /* height: 800px; */
+    margin-top: 65px;
+    background-image: url(../images/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    padding-top: 230px;
+    padding-bottom: 50px;
+    font-size: 66px;
+    color: #ffffff;
+    font-weight: 800;
+    line-height: 88px;
+    text-align: center;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Noto Sans,ui-sans-serif,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,Arial;
+}
+
+.title span {
+    color: #ffffff;
+}
+
+article p {
+    padding: 0 3rem;
+    margin-top: 1.25rem;
+    color: #dadada;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.cont {
+    width: 100%;
+    padding: 50px 0;
+    background-color: transparent;
+}
+
+.cont .startbtn {
+    height: 10vh;
+    display: grid;
+    place-items: center;
+    background: transparent;
+}
+
+.cont .startbtn button { 
+    --glow-color: rgb(176, 177, 255);
+    --glow-spread-color: rgba(123, 127, 255, 0.781);
+    --enhanced-glow-color: rgb(206, 212, 255);
+    --btn-color: rgb(58, 71, 248);
+    box-shadow: 0 0 .05em .05em var(--glow-color),
+           0 0 1em .25em var(--glow-spread-color),
+           inset 0 0 .05em .05em var(--glow-color);
+    text-shadow: 0 0 .05em var(--glow-color);
+
+    cursor: pointer;
+    position: relative;
+    padding: 12px 28px;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--glow-color);
+    background: var(--btn-color);
+    border: 0.05em solid var(--glow-color);
+    border-radius: 1em;
+    transition: all .3s;
+    outline: none;
+}
+
+.cont .startbtn button:hover {
+    z-index: 1;
+    border-color: transparent;
+    color: var(--btn-color);
+    background: linear-gradient(
+        90deg,
+        #f9d923,
+        #00a19d,
+        #0c87b7,
+        #cb49ff,
+        #ff6666,
+        #f9d923
+    );
+    background-size: 400%;
+    animation: glow 12s linear forwards;
+    box-shadow: 0 0 .025em .025em var(--glow-color),
+           0 0 1em .5em var(--glow-spread-color),
+           inset 0 0 .025em .025em var(--glow-color);
+}
+
+@keyframes glow {
+
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 400%;
+    }
+
+}
+
+.cont .startbtn button::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    background: inherit;
+    filter: blur(36px);
+    opacity: 0;
+    transition: .4s ease-out;
+}
+
+.cont .startbtn button:hover::before {
+    opacity: 1; 
+    z-index: -1;
+}
+
+.backtotop {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 10%;
+    z-index: 999;
+}
+
+.backtotop button {
+    display: flex;
+    align-items: center;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: #ababab;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    background: 0 0;
+    overflow-y: visible;
+    animation: top-to-left 1s ease;
+    transition: all 1s ease;
+}
+
+.backtotop button:hover {
+    color: #ffffff;
+}
+
+@keyframes top-to-left {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.backtotop button span svg path {
+    transform: scale(2.5);
+}
+
+@keyframes left-move {
+    0% {
+        transform: translate(500px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .loader .loader-item {
+        left: 43%;
+    }
+    .title {
+        padding-top: 200px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .loader .loader-item {
+        left: 40%;
+    }
+    .title {
+        padding-top: 150px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    iframe:nth-child(1) {
+        height: 0;
+    }
+    .title {
+        padding-top: 100px;
+    }
+}
