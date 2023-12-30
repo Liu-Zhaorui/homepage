@@ -167,3 +167,12 @@ article {
         width: 600px;
     }
 }
+
+@media screen and (min-width: 1500px) {
+    .list:nth-child(3) .title {
+        font-size: 72px;
+    }
+    .list p {
+        width: 750px;
+    }
+}
