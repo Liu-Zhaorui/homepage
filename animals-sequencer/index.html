@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animals Sequencer</title>
+  <link rel="stylesheet" href="stylesheets/jquery-ui.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+  <link rel="shortcut icon" href="images/miao-3.png"/>
+</head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>ANIMALS · Sequencer</h1>
+        <h2>埃尼莫斯 · 音序器</h2>
+      </div>
+      <div class="row controlbar">
+        <button id="play-pause" type="button" class="btn btn-default btn-lg noselect cursorchange">
+          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+        </button>
+        <span class="tempo-container">
+          <label for="tempo-input" >Tempo</label>
+          <input id="tempo-input" type="number" disabled>
+          <span id="decrease-tempo" class="glyphicon glyphicon-minus btn btn-default tempo-btn cursorchange"></span>
+          <span id="increase-tempo" class="glyphicon glyphicon-plus btn btn-default tempo-btn cursorchange"></span>
+        </span>
+      </div>
+      <div class="row">
+        <div class="effect-controls col-md-4">
+          <div class="control">
+            <button id="reverb" class="btn btn-default btn-lg btn-lg-reverb btn-reverb cursorchange"> Reverb </button>
+          </div>
+        </div>
+        <div class="filter-controls col-md-4">
+          <div class="control">
+            <button id="eq" class="btn btn-default btn-lg btn-lg-reverb btn-eq cursorchange">EQ</button>
+          </div>
+          <div class="control">
+            <label for="freq-slider" class="slidername">Frequency</label>
+            <div id="freq-slider"></div>
+          </div>
+          <div class="control">
+            <label for="gain-slider" class="slidername">Gain</label>
+            <div id="gain-slider"></div>
+          </div>
+        </div>
+        <div class="change-controls col-md-4">
+          <div class="control">
+            <button id="distortion" class="btn btn-default btn-lg btn-lg-reverb btn-distortion cursorchange">Distortion</button>
+          </div>
+        </div>
+        
+      </div>
+      <div class="row" data-instrument="gu">
+        <span class="species-label gugu"><strong>高 咕</strong></span>
+        <div class="pad pad11 column_0 selected"></div>
+        <div class="pad pad11 column_1"></div>
+        <div class="pad pad11 column_2 selected"></div>
+        <div class="pad pad11 column_3 selected"></div>
+        <div class="pad pad11 column_4 selected"></div>
+        <div class="pad pad11 column_5"></div>
+        <div class="pad pad11 column_6"></div>
+        <div class="pad pad11 column_7 selected"></div>
+        <div class="pad pad11 column_8 selected"></div>
+        <div class="pad pad11 column_9 selected"></div>
+        <div class="pad pad11 column_10"></div>
+        <div class="pad pad11 column_11 selected"></div>
+        <div class="pad pad11 column_12"></div>
+        <div class="pad pad11 column_13 selected"></div>
+        <div class="pad pad11 column_14 selected"></div>
+        <div class="pad pad11 column_15"></div>
+      </div>
+      <div class="row" data-instrument="miao">
+        <span class="species-label miaomiao"><strong>中 喵</strong></span>
+        <div class="pad pad21 column_0 selected"></div>
+        <div class="pad pad22 column_1"></div>
+        <div class="pad pad23 column_2"></div>
+        <div class="pad pad24 column_3 selected"></div>
+        <div class="pad pad21 column_4"></div>
+        <div class="pad pad22 column_5"></div>
+        <div class="pad pad23 column_6"></div>
+        <div class="pad pad24 column_7 selected"></div>
+        <div class="pad pad21 column_8"></div>
+        <div class="pad pad22 column_9"></div>
+        <div class="pad pad23 column_10"></div>
+        <div class="pad pad24 column_11"></div>
+        <div class="pad pad21 column_12 selected"></div>
+        <div class="pad pad22 column_13"></div>
+        <div class="pad pad23 column_14"></div>
+        <div class="pad pad24 column_15"></div>
+      </div>
+      <div class="row" data-instrument="duck">
+        <span class="species-label dudu"><strong>大 可</strong></span>
+        <div class="pad pad31 column_0"></div>
+        <div class="pad pad31 column_1"></div>
+        <div class="pad pad31 column_2 selected"></div>
+        <div class="pad pad31 column_3"></div>
+        <div class="pad pad31 column_4"></div>
+        <div class="pad pad31 column_5 selected"></div>
+        <div class="pad pad31 column_6"></div>
+        <div class="pad pad31 column_7"></div>
+        <div class="pad pad31 column_8"></div>
+        <div class="pad pad31 column_9"></div>
+        <div class="pad pad31 column_10 selected"></div>
+        <div class="pad pad31 column_11"></div>
+        <div class="pad pad31 column_12"></div>
+        <div class="pad pad31 column_13"></div>
+        <div class="pad pad31 column_14 selected"></div>
+        <div class="pad pad31 column_15"></div>
+      </div>
+      <div class="row" data-instrument="dog">
+        <span class="species-label wangwang"><strong>道 哥</strong></span>
+        <div class="pad pad41 column_0"></div>
+        <div class="pad pad41 column_1 selected"></div>
+        <div class="pad pad41 column_2"></div>
+        <div class="pad pad41 column_3 selected"></div>
+        <div class="pad pad41 column_4 selected"></div>
+        <div class="pad pad41 column_5"></div>
+        <div class="pad pad41 column_6"></div>
+        <div class="pad pad41 column_7"></div>
+        <div class="pad pad41 column_8 selected"></div>
+        <div class="pad pad41 column_9 selected"></div>
+        <div class="pad pad41 column_10"></div>
+        <div class="pad pad41 column_11 selected"></div>
+        <div class="pad pad41 column_12"></div>
+        <div class="pad pad41 column_13 selected"></div>
+        <div class="pad pad41 column_14"></div>
+        <div class="pad pad41 column_15"></div>
+      </div>
+      <div class="row" data-instrument="ma">
+        <span class="species-label mama"><strong>卧底马</strong></span>
+        <div class="pad pad51 column_0"></div>
+        <div class="pad pad51 column_1"></div>
+        <div class="pad pad51 column_2 selected"></div>
+        <div class="pad pad51 column_3"></div>
+        <div class="pad pad51 column_4"></div>
+        <div class="pad pad51 column_5"></div>
+        <div class="pad pad51 column_6 selected"></div>
+        <div class="pad pad51 column_7"></div>
+        <div class="pad pad51 column_8"></div>
+        <div class="pad pad51 column_9"></div>
+        <div class="pad pad51 column_10 selected"></div>
+        <div class="pad pad51 column_11"></div>
+        <div class="pad pad51 column_12"></div>
+        <div class="pad pad51 column_13"></div>
+        <div class="pad pad51 column_14"></div>
+        <div class="pad pad51 column_15"></div>
+      </div>
+      <div class="row" data-instrument="mou">
+        <span class="species-label moumou"><strong>低 牛</strong></span>
+        <div class="pad pad61 column_0 selected"></div>
+        <div class="pad pad62 column_1"></div>
+        <div class="pad pad62 column_2"></div>
+        <div class="pad pad63 column_3"></div>
+        <div class="pad pad61 column_4"></div>
+        <div class="pad pad62 column_5"></div>
+        <div class="pad pad62 column_6"></div>
+        <div class="pad pad63 column_7"></div>
+        <div class="pad pad61 column_8"></div>
+        <div class="pad pad62 column_9"></div>
+        <div class="pad pad62 column_10"></div>
+        <div class="pad pad63 column_11"></div>
+        <div class="pad pad61 column_12"></div>
+        <div class="pad pad62 column_13"></div>
+        <div class="pad pad62 column_14"></div>
+        <div class="pad pad63 column_15"></div>
+      </div>
+      <div class="row" data-instrument="ta">
+        <span class="species-label tata"><strong>打击獭</strong></span>
+        <div class="pad pad71 column_0 selected"></div>
+        <div class="pad pad71 column_1"></div>
+        <div class="pad pad71 column_2"></div>
+        <div class="pad pad71 column_3"></div>
+        <div class="pad pad71 column_4 selected"></div>
+        <div class="pad pad71 column_5"></div>
+        <div class="pad pad71 column_6"></div>
+        <div class="pad pad71 column_7"></div>
+        <div class="pad pad71 column_8 selected"></div>
+        <div class="pad pad71 column_9"></div>
+        <div class="pad pad71 column_10"></div>
+        <div class="pad pad71 column_11"></div>
+        <div class="pad pad71 column_12 selected"></div>
+        <div class="pad pad71 column_13"></div>
+        <div class="pad pad71 column_14"></div>
+        <div class="pad pad71 column_15"></div>
+      </div>
+      <a href="../works.html" class="backtopre cursorchange"></a>
+      <div class="backtotop cursorchange">
+        <button>
+            <span class="btp"></span>
+        </button>
+      </div>
+      <script src="javascripts/backtotop.js"></script>
+    </div>
+    <div>
+      <canvas id="canvas"></canvas> 
+    </div>
+    <footer class="body-foot">
+      <div class="name">
+          <a href="#"> 《音乐类在线应用的设计与开发》 </a>
+      </div>
+      <div class="foot-container">
+          <div class="catagories">
+              <div class="column">
+                  <a href="#"> Design and Development of Online Music Applications </a>
+              </div>
+          </div>
+      </div>
+      <div class="foot-bottom">
+          Designed by Shao Xiaorong & Liu Zhaorui <br>
+          Ackownledgement: Liu Wenhui
+      </div>
+    </footer>
+
+    <!-- Javascripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascripts/kit.js"></script>
+    <script type="text/javascript" src="javascripts/impulse-response.js"></script>
+    <script type="text/javascript" src="javascripts/app.js"></script>
+    <script type="text/javascript" src="javascripts/analyser.js"></script>
+  </body>
+</html>
