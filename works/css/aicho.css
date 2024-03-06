@@ -205,6 +205,15 @@ article {
     background-position: center;
 }
 
+.body-container .body-overview .boch .image-box .image-4 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../materials/award9.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 .body-container .body-overview .mingcheng {
     position: relative;
     width: 100%;
