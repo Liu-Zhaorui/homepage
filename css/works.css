@@ -536,3 +536,33 @@ article {
 }
 
 /* ---------------------------------------------------------------- */
+
+.body-container .body-overview .mdb13 {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/citysound.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.body-container .body-overview .mdb13:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
+}
+
+.body-container .body-overview .mdb13:hover .mingcheng {
+    opacity: 1;
+    transform: scale(0.9);
+}
+
+.body-container .body-overview .mdb13:hover .mengban {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .25);
+}
+
+/* ---------------------------------------------------------------- */
