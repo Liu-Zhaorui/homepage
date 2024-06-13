@@ -24,7 +24,6 @@ body {
     width: calc(100vw + 18px);
     overflow: auto;
     font-family: Consolas,Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Noto Sans,ui-sans-serif,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,Arial;
-
 }
 
 ul {

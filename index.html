@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/gallery.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Home | Zhaorui Liu</title>
 </head>
@@ -77,6 +78,120 @@
             </h2>
             <p>I'm a Sonic Interactive Designer, Sound Designer, a Pianist and also a Bamboo Flute Performer.</p>
             <p>My works focus on Sonic Interactive Installation, Sound Design, Human-Computer Interaction and New Media Art.</p>
+            <div class="gallery" unique-script-id="w-w-dm-id">
+                <div class="responsive-container-block bigContainer">
+                    <div class="responsive-container-block Container">
+                        <div class="project project1">
+                            <img class="smallImage" src="works/materials/atlas2.png">
+                            <div class="overlay">
+                                <div class="overlay-inner">
+                                    <button class="close">
+                                        X
+                                    </button>
+                                    <div class="hdImgs">
+                                        <img class="squareImg" src="works/materials/atlas2.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-box">
+                                <button class="btn">
+                                    View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project project2">
+                            <img class="smallImage" src="works/materials/cosmicr2.png">
+                            <div class="overlay">
+                                <div class="overlay-inner">
+                                    <button class="close">
+                                        X
+                                    </button>
+                                    <div class="hdImgs">
+                                        <img class="squareImg" src="works/materials/cosmicr2.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-box">
+                                <button class="btn">
+                                    View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project project3">
+                            <img class="smallImage" src="works/materials/atlas1.png">
+                            <div class="overlay">
+                                <div class="overlay-inner">
+                                    <button class="close">
+                                        X
+                                    </button>
+                                    <div class="hdImgs">
+                                        <img class="squareImg" src="works/materials/atlas1.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-box">
+                                <button class="btn">
+                                    View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project project4">
+                            <img class="smallImage" src="works/materials/citysound2.jpg">
+                            <div class="overlay">
+                                <div class="overlay-inner">
+                                    <button class="close">
+                                        X
+                                    </button>
+                                    <div class="hdImgs">
+                                        <img class="squareImg" src="works/materials/citysound2.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-box">
+                                <button class="btn">
+                                    View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project project5">
+                            <img class="smallImage" src="works/materials/cosmusica7.png">
+                            <div class="overlay">
+                                <div class="overlay-inner">
+                                    <button class="close">
+                                        X
+                                    </button>
+                                    <div class="hdImgs">
+                                        <img class="squareImg" src="works/materials/cosmusica7.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-box">
+                                <button class="btn">
+                                    View
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project project6">
+                            <img class="smallImage" src="works/materials/cosmicr8.gif">
+                            <div class="overlay">
+                                <div class="overlay-inner">
+                                    <button class="close">
+                                        X
+                                    </button>
+                                    <div class="hdImgs">
+                                        <img class="squareImg" src="works/materials/cosmicr8.gif">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-box">
+                                <button class="btn">
+                                    View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="cont">
                 <div class="startbtn">
                     <a href="works.html">
@@ -162,6 +277,15 @@
             backSpeed: 50,
             smartBackspace: true,
         });
+        $(document).ready(function() {
+            $(`[unique-script-id="w-w-dm-id"] .btn-box`).click(function() {
+              $(this).parent().children(".overlay").show();
+          
+            });
+            $(`[unique-script-id="w-w-dm-id"] .close`).click(function() {
+              $(".overlay").hide();
+            });
+          });
     </script>
 </body>
 </html>
