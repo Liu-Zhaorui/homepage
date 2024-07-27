@@ -198,7 +198,6 @@ article p {
 
 @media screen and (max-width: 991px) {
     article {
-        height: 1500px;
         background-image: url(../images/bg2.png);
     }
     .loader .loader-item {
