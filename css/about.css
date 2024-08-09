@@ -1,0 +1,213 @@
+article {
+    margin-top: 65px;
+    padding-top: 25px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content .list {
+    margin-bottom: 30px;
+}
+
+.list .title {
+    font-size: 36px;
+    color: #38ff8b;
+    font-weight: 900;
+    line-height: 40px;
+    text-align: center;
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Noto Sans,ui-sans-serif,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,Arial;
+}
+
+.list p {
+    padding: 0 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.list p img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.list:nth-child(2) p {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.list:nth-child(2) p span {
+    margin: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.list:nth-child(2) p span:hover {
+    color: #a200a2;
+}
+
+.list:nth-child(2) p span img {
+    width: 75px;
+    height: 75px;
+    margin: 10px 0;
+}
+
+.list:nth-child(2) p .keyboard {
+    width: 100%;
+    height: 200px;
+    background-image: url(../upload/key.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.list:nth-child(2) p .flute {
+    width: 100%;
+    height: 200px;
+    background-image: url(../upload/flute.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.list p span {
+    color: #9fa5a9;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.havefun {
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    width: 75px;
+    height: 125px;
+    z-index: 999;
+    background-image: url(../animals-sequencer/images/distortion.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: top-to-left 1.5s ease-in-out;
+    transition: all 1.5s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+}
+
+.havefun:hover {
+    transform: scale(1.15);
+}
+
+.havefun a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.backtotop {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 10%;
+    z-index: 999;
+}
+
+.backtotop button {
+    display: flex;
+    align-items: center;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    color: #ababab;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+    background: 0 0;
+    overflow-y: visible;
+    animation: top-to-left 1s ease;
+    transition: all 1s ease;
+}
+
+.backtotop button:hover {
+    color: #ffffff;
+}
+
+@keyframes top-to-left {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.backtotop button span svg path {
+    transform: scale(2.5);
+}
+
+@keyframes left-move {
+    0% {
+        transform: translate(500px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@media screen and (min-width: 576px) { 
+    .list:nth-child(3) .title {
+        font-size: 34px;
+    }
+    .list p {
+        width: 340px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .list:nth-child(3) .title {
+        font-size: 34px;
+    }
+    .list p {
+        width: 340px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .list:nth-child(3) .title {
+        font-size: 48px;
+    }
+    .list p {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .list:nth-child(3) .title {
+        font-size: 66px;
+    }
+    .list p {
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .list:nth-child(3) .title {
+        font-size: 72px;
+    }
+    .list p {
+        width: 750px;
+    }
+}
