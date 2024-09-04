@@ -185,7 +185,7 @@ article {
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 960px) {
     .list:nth-child(3) .title {
         font-size: 48px;
     }
