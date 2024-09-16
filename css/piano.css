@@ -68,7 +68,7 @@
 
 .piano-keys .key{
   list-style: none;
-  color: #a2a2a2;
+  color: #28a745;
   text-transform: uppercase;
   cursor: pointer;
   position: relative;
