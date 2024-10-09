@@ -66,7 +66,7 @@ article {
 
 .list:nth-child(2) p .flute {
     width: 100%;
-    height: 95px;
+    height: 144px;
     background-image: url(../upload/flute.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,6 +79,10 @@ article {
     line-height: 28px;
     font-weight: 400;
     text-align: center;
+}
+
+.wrapper {
+    height: 100%;
 }
 
 .havefun {

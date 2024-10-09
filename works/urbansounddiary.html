@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="css/bigvoice.css">
+    <link rel="stylesheet" href="css/urbansounddiary.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../upload/favicon.ico"/>
-    <title>BigVoice | Zhaorui Liu</title>
+    <title>Urban Sound Diary | Zhaorui Liu</title>
 </head>
 <body>
     <div class="container">
@@ -38,6 +38,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../exibitions.html">Exibitions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../live.html">Live</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../publications.html">Publications</a>
@@ -67,31 +70,23 @@
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                 </ol>
                 <div class="carousel-inner" style="height:100%;">
+                    <div class="carousel-item" data-interval="3000">
+                        <img src="materials/urban3.jpg" class="d-block w-100">
+                    </div>
                     <div class="carousel-item active" data-interval="3000">
-                        <img src="materials/citysound3.jpg" class="d-block w-100">
-                    </div>
-                    <div class="carousel-item" data-interval="3000">
-                        <img src="materials/citysound2.jpg" class="d-block w-100">
-                    </div>
-                    <div class="carousel-item" data-interval="3000">
-                        <img src="materials/citysound1.jpg" class="d-block w-100">
-                    </div>
-                    <div class="carousel-item" data-interval="3000">
-                        <img src="materials/citysound5.jpg" class="d-block w-100">
+                        <img src="materials/urban4.png" class="d-block w-100">
                     </div>
                 </div>
             </div>
             <div class="body-container">
                 <div class="body-overview">
                     <h1>
-                        <span>BigVoice</span>
+                        <span>Urban Sound Diary</span>
                     </h1>
                     <h3>
-                        <span>Interactive Sound Application</span>
+                        <span>Browser-based Interactive Urban Sound Explorer App</span>
                     </h3>
                     <h3>
                         <span>2024.7--2024.9</span>
@@ -102,17 +97,22 @@
                             <p class="mingcheng2" style="margin: 0;">Fu Xuehua</p>
                             <p class="mingcheng2" style="margin: 0;">Liu Zhaorui</p>
                             <p class="mingcheng2" style="margin: 0;">Wen Jiayi</p>
+                            <p class="mingcheng2" style="margin: 0;">Zheng Hao</p>
+                            <p class="mingcheng2" style="margin: 0;">Dong Bo</p>
                             <p class="mingcheng2" style="margin: 0;">Marcel Zaes Sagesser</p>
                         </div>
                         <div class="mingcheng" style="text-align: center;">
                             <p class="mingcheng1" style="line-height: 1.25em; font-weight: 900;">MY ROLE</p>
                             <p class="mingcheng2" style="margin: 0;">UI Designer</p>
+                            <p class="mingcheng2" style="margin: 0;">Sound Interaction Designer</p>
                             <p class="mingcheng2" style="margin: 0;">Frontend Developer</p>
                         </div>
                         <div class="mingcheng" style="text-align: center;">
                             <p class="mingcheng1" style="line-height: 1.25em; font-weight: 900;">TOOLS</p>
                             <p class="mingcheng2" style="margin: 0;">Python</p>
+                            <p class="mingcheng2" style="margin: 0;">Flask</p>
                             <p class="mingcheng2" style="margin: 0;">JavaScript</p>
+                            <p class="mingcheng2" style="margin: 0;">(Web Audio API)</p>
                         </div>
                         <div class="mingcheng" style="text-align: center;">
                             <p class="mingcheng1" style="line-height: 1.25em; font-weight: 900;">SURPPOTED BY</p>
@@ -125,7 +125,17 @@
                     <div class="boch" style="margin-top: 20px;">
                         <div class="mingcheng">
                             <p class="mingcheng2">
-                                Have you ever thought about how technology changes our perception of the city? “CitySound” is a project in which 11 young adults from this city have been recruited, have built their own low-tech audio recorder, and have the taken a soundwalk through Longgang, where each young adult decided which sounds they would like to record. They used the self-made wearable audio recorder to record the sound, and brought it back into this exhibition, where we can now listen to their individual perspective on the soundscape of Longgang – mediated through technology that blends “low-fi” with “high-fi.”
+                                How do people interact with their cities through sonic technologies, and how do such technologies, in turn, change our cities? On the example of Shenzhen, a large Chinese city with a high sonic density, this research aims at understanding, through a designed technological sound interaction device, the "messiness" and loudness of the city famous for its "high-tech" pioneers. Sonic technologies are a constitutional element of our contemporary urban soundscapes, which, in turn, are increasingly overtly complex assemblages. Using an interdisciplinary framework with sound studies, data visualization, computer science and auditory interaction design, the authors have developed "Urban Sound Diary", a browser-based app which allows local users to record, visualize, and creatively re-play the sounds from their urban environment. This paper details the conceptual approach as well as the technical development of "Urban Sound Diary", including the application of concatenative synthesis, auditory feature extraction and dimensionality reduction for a 2D data plot on the user interface, as well as creating the sound "remixer" for users to interact with. We report the findings from the pilot user study that includes outdoor test recordings for dataset building and indoor playback and remixing. The discussion builds on the authors' interdisciplinary backgrounds and previous work in computer science, computer music, sound cognition, and sound studies, so as to shed light on a novel, practice-based approach to interacting with the sonic city. The feature space of urban sounds in a highly complex environment, such as Shenzhen, is "compressed" in "Urban Sound Diary". This approach has the potential to reveal new knowledge about how users interact with their urban environments through sound technology; and how the latter ultimately shapes the city.
+                            </p>
+                            <p class="mingcheng2">
+                                We present the design of "Urban Sound Diary" (see figure 5), a browsed-based mobile app for users in Shenzhen to record their sonic footprints, explore the collection of urban sounds contributed by other users, and create an imaginary soundscape of their own, on their phone. The app consists of a recorder module and a sound browser module. The recorder allows the user to record sounds and upload audio files to the server. The recorder page contains a standard waveform visualizer that provides real-time feedback while the user records. A duration of 5 to 60 seconds is recommended by the app. By engaging users in playing with our app, a database of urban sounds is constructed collectively from user uploads, using a participatory, crowd-sourcing approach.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="boch" style="margin-top: 20px;">
+                        <div class="mingcheng">
+                            <p class="mingcheng2">
+                                Workflow of "Urban Sound Diary", starting with the existing and changing soundscape of a dense urban space like Shenzhen, the user recording the former with the provided app and the phone's built-in microphone, the uploading process to the server, and the sound browser offering the user a visualized, interactive UI to re-enliven and play with the collected sounds.
                             </p>
                         </div>
                     </div>
@@ -137,7 +147,13 @@
                     <div class="boch" style="margin-top: 20px;">
                         <div class="mingcheng">
                             <p class="mingcheng2">
-                                The projects on display are based on the results created by the workshop "CitySound". In this workshop, participants learnt to make their own recording equipment and choose a custom shape for it. These devices look like low-tech electronics but have high-tech features that allow them to record, store, playback, and display recordings. At the same time, they observed the electrical signals in the circuit through an oscilloscope, to visualize the audio. Showing the combination and clash of low technology and high technology.
+                                1: Index page: (1) Login button; (1a) Login window; (2) Visual explanation of the app’s logic; (3) Info about the research group behind the app.
+                            </p>
+                            <p class="mingcheng2">
+                                2: Recorder page: (4) Scatterplow window; (4a) Input audio waveform; (5) Record button; (6a) Recording list title; (6b) Upload and delete recording; (6c) Playback recording.
+                            </p>
+                            <p class="mingcheng2">
+                                3: Sound Browser page: (8) Return to record page; (9) User name; (10) Switch between UMAP and t-SNE; (11) Scatterplot window; (11b) Selection circle; (12a) Volume icon; (12b) Reverb icon; (12c) Low-pass filter icon; (13) Eraser icon; (14) Switch between user only or group display; (14a) Group display; (14b) User only display.
                             </p>
                         </div>
                     </div>
@@ -148,33 +164,35 @@
                     </div>
                     <div class="boch" style="margin-top: 50px;">
                         <div class="mingcheng" style="width: 55%;">
-                            <p class="mingcheng1">DIY Sound Recorders</p>
+                            <p class="mingcheng1">Sound Recorder</p>
                             <p class="mingcheng2">
-                                On the topic of “CitySound”, the workshop participants learnt to build their own sound recording device and choose a custom shape for it. These devices look like electronics, quite low tech, but they have high-tech functionality and can record, store, playback, and present sound recordings. It’s a device in which low tech meets high tech. The participants will then explore the nearby streets and collect “City Sounds.” While walking, participants learn to listen to the city sound through technology, and they will understand how technology changes the way they listen.
+                                The recorder allows users to record, play back, and upload audio for analysis. When the record button is pressed, it turns orange and initiates audio recording via the MediaRecorder API, visualizing the waveform on a canvas. The visual utilizes 'getUserMedia' to access the microphone, initializes an 'AudioContext' and an 'AnalyserNode' for real-time processing, and draws the waveform with the canvas 2D context. Users can manage recordings through various buttons, with recorded audio saved as a Blob for playback and uploading. A timer is displayed during recording, and upon completion, a recording list appears showing the recording time, options to delete or upload recordings, and playback functionality. Once users upload the recording, the segmentation of the audio will begin. After uploading, audio segmentation begins, and once the user completes recording and playback, the analyzer button integrates the segmented audio using t-SNE and UMAP algorithms, directing the user to the sound browser page.
                             </p>
                         </div>
-                        <div class="image-box" style="width: 45%;">
+                        <div class="image-box" style="width: 45%; height: 500px;">
                             <div class="image-3"></div>
                         </div>
                     </div>
                     <div class="boch" style="margin-top: 50px;">
-                        <div class="image-box" style="width: 45%;">
+                        <div class="image-box" style="width: 25%; height: 500px;">
                             <div class="image-4"></div>
                         </div>
-                        <div class="mingcheng" style="width: 55%;">
-                            <p class="mingcheng1">Interaction Interface</p>
+                        <div class="mingcheng" style="width: 75%;">
+                            <p class="mingcheng1">Data visualization</p>
                             <p class="mingcheng2">
-                                The audience clicks on the interactive sound device to listen to and experience the sound works recorded and produced by the workshop participants. It demonstrates different participants’ understanding of sound, high-tech and low-tech, and “sound city”, and also explores how technology and cities are always connected in diverse ways.
+                                The app provides the user with an intuitive visual interface of the crowd-sourced database to navigate the segmented sound units in a 2D space, to experiment with post-effects on the selected sounds, and to combine samples into artistic-creative digital soundscape compositions that act as their urban sound diary. The app is aimed at making ordinary users aware of their sonic surroundings and of their city; and it assists them in understanding their sonic environment as an essential part of their experience in urban space. The app also explores an experimental tool for soundscape design leveraging interactive data visualization and sonic creation.
                             </p>
                         </div>
                     </div>
+                    
                     <div class="boch" style="margin-top: 50px;">
-                        <div class="mingcheng" style="width: 100%;">
-                            <p class="mingcheng1">Photos by: Bai Yiyuan</p>
+                        <div class="mingcheng" style="width: 55%;">
+                            <p class="mingcheng1">Interaction Interface</p>
+                            <p class="mingcheng2">
+                                On the topic of “CitySound”, the workshop participants learnt to build their own sound recording device and choose a custom shape for it. These devices look like electronics, quite low tech, but they have high-tech functionality and can record, store, playback, and present sound recordings. It’s a device in which low tech meets high tech. The participants will then explore the nearby streets and collect “City Sounds.” While walking, participants learn to listen to the city sound through technology, and they will understand how technology changes the way they listen.
+                            </p>
                         </div>
-                    </div>
-                    <div class="boch" style="margin-top: 0;">
-                        <div class="image-box" style="height: 800px; width: 100%;">
+                        <div class="image-box" style="width: 45%; height: 500px;">
                             <div class="image-5"></div>
                         </div>
                     </div>
