@@ -150,7 +150,7 @@ article {
 .body-container .body-overview .mdb1 .image-box .image {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib1.jpg);
+    background-image: url(../works/materials/octoqin2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -219,7 +219,7 @@ article {
 .body-container .body-overview .mdb2 .image-box .image {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib2.png);
+    background-image: url(../images/accessible.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -254,7 +254,7 @@ article {
 .body-container .body-overview .mdb3 .image-box .image {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib3.png);
+    background-image: url(../images/csde.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -289,7 +289,7 @@ article {
 .body-container .body-overview .mdb4 .image-box .image {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib4.jpg);
+    background-image: url(../images/appleworkshop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -297,321 +297,6 @@ article {
 }
 
 .body-container .body-overview .mdb4 .image-box .image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
-}
-
-/* ---------------------------------------------------------------- */
-
-.body-container .body-overview .mdb5 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    margin: 20px 0;
-    height: 400px;
-    width: 95%;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb5 .image-box {
-    height: 100%;
-    width: 45%;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb5 .image-box .image {
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/exib5.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-}
-
-.body-container .body-overview .mdb5 .image-box .image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
-}
-
-/* ---------------------------------------------------------------- */
-
-.body-container .body-overview .mdb6 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    margin: 20px 0;
-    height: 400px;
-    width: 95%;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb6 .image-box {
-    height: 100%;
-    width: 45%;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb6 .image-box .image {
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/exib6.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-}
-
-.body-container .body-overview .mdb6 .image-box .image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
-}
-
-/* ---------------------------------------------------------------- */
-
-.body-container .body-overview .mdb7 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    margin: 20px 0;
-    height: 400px;
-    width: 95%;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb7 .image-box {
-    height: 100%;
-    width: 45%;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb7 .image-box .image {
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/exib7.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-}
-
-.body-container .body-overview .mdb7 .image-box .image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
-}
-
-/* ---------------------------------------------------------------- */
-
-.body-container .body-overview .mdb8 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    margin: 20px 0;
-    height: 400px;
-    width: 95%;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb8 .image-box {
-    height: 100%;
-    width: 45%;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb8 .image-box .image {
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/exib8.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-}
-
-.body-container .body-overview .mdb8 .image-box .image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
-}
-
-/* ---------------------------------------------------------------- */
-
-.body-container .body-overview .mdb9 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    margin: 20px 0;
-    height: 400px;
-    width: 95%;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb9 .image-box {
-    height: 100%;
-    width: 45%;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb9 .image-box .image {
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/exib9.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-}
-
-.body-container .body-overview .mdb9 .image-box .image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
-}
-
-/* ---------------------------------------------------------------- */
-
-.body-container .body-overview .mdb10 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    margin: 20px 0;
-    height: 400px;
-    width: 95%;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb10 .image-box {
-    height: 100%;
-    width: 45%;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb10 .image-box .image {
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/exib10.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-}
-
-.body-container .body-overview .mdb10 .image-box .image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
-}
-
-/* ---------------------------------------------------------------- */
-
-.body-container .body-overview .mdb11 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    margin: 20px 0;
-    height: 400px;
-    width: 95%;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb11 .image-box {
-    height: 100%;
-    width: 45%;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb11 .image-box .image {
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/exib11.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-}
-
-.body-container .body-overview .mdb11 .image-box .image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
-}
-
-/* ---------------------------------------------------------------- */
-
-.body-container .body-overview .mdb12 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    margin: 20px 0;
-    height: 400px;
-    width: 95%;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb12 .image-box {
-    height: 100%;
-    width: 45%;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb12 .image-box .image {
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/exib12.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-}
-
-.body-container .body-overview .mdb12 .image-box .image:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
-}
-
-/* ---------------------------------------------------------------- */
-
-.body-container .body-overview .mdb13 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    margin: 20px 0;
-    height: 400px;
-    width: 95%;
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb13 .image-box {
-    height: 100%;
-    width: 45%;
-    overflow: hidden;
-}
-
-.body-container .body-overview .mdb13 .image-box .image {
-    height: 100%;
-    width: 100%;
-    background-image: url(../images/exib13.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-}
-
-.body-container .body-overview .mdb13 .image-box .image:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
