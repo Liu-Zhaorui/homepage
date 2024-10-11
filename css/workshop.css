@@ -147,17 +147,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb1 .image-box .image {
+.body-container .body-overview .mdb1 .image-box .image1 {
     height: 100%;
     width: 100%;
-    background-image: url(../works/materials/octoqin2.jpg);
+    background-image: url(../works/materials/octoqin2-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb1 .image-box .image:hover {
+.body-container .body-overview .mdb1 .image-box .image1.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../works/materials/octoqin2.jpg);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb1 .image-box .image1:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -216,17 +224,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb2 .image-box .image {
+.body-container .body-overview .mdb2 .image-box .image2 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/accessible.jpg);
+    background-image: url(../images/accessible-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb2 .image-box .image:hover {
+.body-container .body-overview .mdb2 .image-box .image2.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/accessible.jpg);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb2 .image-box .image2:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -251,17 +267,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb3 .image-box .image {
+.body-container .body-overview .mdb3 .image-box .image3 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/csde.png);
+    background-image: url(../images/csde-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb3 .image-box .image:hover {
+.body-container .body-overview .mdb3 .image-box .image3.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/csde.png);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb3 .image-box .image3:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -286,17 +310,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb4 .image-box .image {
+.body-container .body-overview .mdb4 .image-box .image4 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/appleworkshop.jpg);
+    background-image: url(../images/appleworkshop-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb4 .image-box .image:hover {
+.body-container .body-overview .mdb4 .image-box .image4.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/appleworkshop.jpg);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb4 .image-box .image4:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }

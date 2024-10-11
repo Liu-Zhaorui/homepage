@@ -76,7 +76,7 @@
                     </h1>
                     <div class="mdb5">
                         <div class="image-box">
-                            <div class="image"></div>
+                            <div class="image5"></div>
                         </div>
                         <div class="mingcheng">
                             <p class="mingcheng1">万象声息——电子音乐与数字影像音乐会</p>
@@ -91,7 +91,7 @@
                     </div>
                     <div class="mdb4">
                         <div class="image-box">
-                            <div class="image"></div>
+                            <div class="image4"></div>
                         </div>
                         <div class="mingcheng">
                             <p class="mingcheng1">声东击西——杜韵大师班成果汇报音乐会</p>
@@ -104,7 +104,7 @@
                     </div>
                     <div class="mdb3">
                         <div class="image-box">
-                            <div class="image"></div>
+                            <div class="image3"></div>
                         </div>
                         <div class="mingcheng">
                             <p class="mingcheng1">临港科技智慧图书馆开幕式</p>
@@ -117,7 +117,7 @@
                     </div>
                     <div class="mdb2">
                         <div class="image-box">
-                            <div class="image"></div>
+                            <div class="image2"></div>
                         </div>
                         <div class="mingcheng">
                             <p class="mingcheng1">第四局国际电子音乐大赛颁奖盛典音乐会 IEMC2022</p>
@@ -131,7 +131,7 @@
                     </div>
                     <div class="mdb1">
                         <div class="image-box">
-                            <div class="image"></div>
+                            <div class="image1"></div>
                         </div>
                         <div class="mingcheng">
                             <p class="mingcheng1">西安音乐学院钢琴系共同课教研室毕业音乐会</p>
@@ -195,6 +195,40 @@
     <script>
         const html = document.querySelector('html');
         const fullScreenBtn = document.getElementById('full-screen-btn');
+
+        const mdb1 = document.querySelector('.image1');
+        const mdb2 = document.querySelector('.image2');
+        const mdb3 = document.querySelector('.image3');
+        const mdb4 = document.querySelector('.image4');
+        const mdb5 = document.querySelector('.image5');
+        
+        const img1 = new Image();
+        const img2 = new Image();
+        const img3 = new Image();
+        const img4 = new Image();
+        const img5 = new Image();
+        img1.src = 'images/concert.jpg';
+        img2.src = 'images/cosmicr.JPG';
+        img3.src = 'works/materials/cosmicr3.png';
+        img4.src = 'images/Sound·East·Strike·West-low.png';
+        img5.src = 'images/ECHOESOFEXISTENCE.jpg';
+        
+        img1.onload = () => {
+            mdb1.classList.add('loaded');
+        };
+        img2.onload = () => {
+            mdb2.classList.add('loaded');
+        };
+        img3.onload = () => {
+            mdb3.classList.add('loaded');
+        };
+        img4.onload = () => {
+            mdb4.classList.add('loaded');
+        };
+        img5.onload = () => {
+            mdb5.classList.add('loaded');
+        };
+
         fullScreenBtn.onclick = () => {
           html.requestFullscreen()
             .then(() => {

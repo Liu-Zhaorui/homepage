@@ -147,7 +147,7 @@ article {
     background-size: cover;
     background-position: center;
     transition: background-image 0.5s ease;
-    filter: blur(50px);
+    filter: blur(30px);
     transition: filter 1s ease;
 }
 
@@ -225,7 +225,7 @@ article {
     background-size: cover;
     background-position: center;
     transition: background-image 0.5s ease;
-    filter: blur(50px);
+    filter: blur(30px);
     transition: filter 1s ease;
 }
 
@@ -263,7 +263,7 @@ article {
     background-size: cover;
     background-position: center;
     transition: background-image 0.5s ease;
-    filter: blur(50px);
+    filter: blur(30px);
     transition: filter 1s ease;
 }
 
@@ -301,7 +301,7 @@ article {
     background-size: cover;
     background-position: center;
     transition: background-image 0.5s ease;
-    filter: blur(50px);
+    filter: blur(30px);
     transition: filter 1s ease;
 }
 
@@ -338,7 +338,7 @@ article {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(50px);
+    filter: blur(30px);
     transition: filter 1s ease;
 }
 
@@ -375,7 +375,7 @@ article {
     background-size: cover;
     background-position: center;
     transition: background-image 0.5s ease;
-    filter: blur(50px);
+    filter: blur(30px);
     transition: filter 1s ease;
 }
 
@@ -413,7 +413,7 @@ article {
     background-size: cover;
     background-position: center;
     transition: background-image 0.5s ease;
-    filter: blur(50px);
+    filter: blur(30px);
     transition: filter 1s ease;
 }
 

@@ -76,7 +76,7 @@
                     </h1>
                     <div class="mdb4">
                         <div class="image-box">
-                            <div class="image"></div>
+                            <div class="image4"></div>
                         </div>
                         <div class="mingcheng">
                             <p class="mingcheng1">中央音乐学院 × APPLE 电子音乐共创工作坊</p>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="mdb3">
                         <div class="image-box">
-                            <div class="image"></div>
+                            <div class="image3"></div>
                         </div>
                         <div class="mingcheng">
                             <p class="mingcheng1">CSDE国际联合设计工作营 · 声景设计工作坊</p>
@@ -108,7 +108,7 @@
                     </div>
                     <div class="mdb2">
                         <div class="image-box">
-                            <div class="image"></div>
+                            <div class="image2"></div>
                         </div>
                         <div class="mingcheng">
                             <p class="mingcheng1">创新音乐体验国际联合工作坊 · 无障碍音乐装置设计工作坊</p>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="mdb1">
                         <div class="image-box">
-                            <div class="image"></div>
+                            <div class="image1"></div>
                         </div>
                         <div class="mingcheng">
                             <p class="mingcheng1">智能化乐器创新设计工作坊</p>
@@ -186,6 +186,34 @@
     <script>
         const html = document.querySelector('html');
         const fullScreenBtn = document.getElementById('full-screen-btn');
+
+        const mdb1 = document.querySelector('.image1');
+        const mdb2 = document.querySelector('.image2');
+        const mdb3 = document.querySelector('.image3');
+        const mdb4 = document.querySelector('.image4');
+        
+        const img1 = new Image();
+        const img2 = new Image();
+        const img3 = new Image();
+        const img4 = new Image();
+        img1.src = 'works/materials/octoqin2.jpg';
+        img2.src = 'images/accessible-low.jpg';
+        img3.src = 'images/csde.png';
+        img4.src = 'images/appleworkshop.jpg';
+        
+        img1.onload = () => {
+            mdb1.classList.add('loaded');
+        };
+        img2.onload = () => {
+            mdb2.classList.add('loaded');
+        };
+        img3.onload = () => {
+            mdb3.classList.add('loaded');
+        };
+        img4.onload = () => {
+            mdb4.classList.add('loaded');
+        };
+
         fullScreenBtn.onclick = () => {
           html.requestFullscreen()
             .then(() => {

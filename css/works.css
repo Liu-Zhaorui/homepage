@@ -142,11 +142,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/octoqin.png);
+    background-image: url(../images/octoqin-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb1.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/octoqin.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb1:hover {
@@ -212,11 +220,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/cosmusica.png);
+    background-image: url(../images/cosmusica-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb2.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/cosmusica.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb2:hover {
@@ -242,11 +258,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/ccmusic.jpg);
+    background-image: url(../images/ccmusic-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb3.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/ccmusic.jpg);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb3:hover {
@@ -272,11 +296,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/vortex.png);
+    background-image: url(../images/vortex-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb4.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/vortex.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb4:hover {
@@ -302,11 +334,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/nahai.png);
+    background-image: url(../images/nahai-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb5.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/nahai.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb5:hover {
@@ -332,11 +372,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/cosmic-r.jpg);
+    background-image: url(../images/cosmic-r-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb6.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/cosmic-r.jpg);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb6:hover {
@@ -362,11 +410,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/heartheocean.png);
+    background-image: url(../images/heartheocean-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb7.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/heartheocean.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb7:hover {
@@ -392,11 +448,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/coralqin.png);
+    background-image: url(../images/coralqin-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb8.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/coralqin.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb8:hover {
@@ -422,11 +486,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/Miniroom-bg.png);
+    background-image: url(../images/Miniroom-bg-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb9.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/Miniroom-bg.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb9:hover {
@@ -452,11 +524,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/aicho.png);
+    background-image: url(../images/aicho-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb10.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/aicho.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb10:hover {
@@ -482,11 +562,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/biodiversity.jpg);
+    background-image: url(../images/biodiversity-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb11.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/biodiversity.jpg);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb11:hover {
@@ -512,11 +600,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/endless.png);
+    background-image: url(../images/endless-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb12.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/endless.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb12:hover {
@@ -542,11 +638,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/citysound.jpg);
+    background-image: url(../images/citysound-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb13.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/citysound.jpg);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb13:hover {
@@ -572,11 +676,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/·_·.jpg);
+    background-image: url(../images/·_·-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb14.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/·_·.jpg);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb14:hover {
@@ -602,11 +714,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/evsound.gif);
+    background-image: url(../images/evsound-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb15.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/evsound.gif);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb15:hover {
@@ -632,11 +752,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/city.png);
+    background-image: url(../images/city-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb16.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/city.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb16:hover {
@@ -662,11 +790,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/appleworkshop.jpg);
+    background-image: url(../images/appleworkshop-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb17.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/appleworkshop.jpg);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb17:hover {
@@ -692,11 +828,19 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
     background-image: url(../images/bg1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb18.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/bg1.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb18:hover {

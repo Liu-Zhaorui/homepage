@@ -147,17 +147,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb1 .image-box .image {
+.body-container .body-overview .mdb1 .image-box .image1 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib1.jpg);
+    background-image: url(../images/exib1-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb1 .image-box .image:hover {
+.body-container .body-overview .mdb1 .image-box .image1.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib1.jpg);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb1 .image-box .image1:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -216,17 +224,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb2 .image-box .image {
+.body-container .body-overview .mdb2 .image-box .image2 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib2.png);
+    background-image: url(../images/exib2-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb2 .image-box .image:hover {
+.body-container .body-overview .mdb2 .image-box .image2.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib2.png);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb2 .image-box .image2:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -251,17 +267,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb3 .image-box .image {
+.body-container .body-overview .mdb3 .image-box .image3 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib3.png);
+    background-image: url(../images/exib3-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb3 .image-box .image:hover {
+.body-container .body-overview .mdb3 .image-box .image3.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib3.png);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb3 .image-box .image3:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -286,17 +310,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb4 .image-box .image {
+.body-container .body-overview .mdb4 .image-box .image4 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib4.jpg);
+    background-image: url(../images/exib4-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb4 .image-box .image:hover {
+.body-container .body-overview .mdb4 .image-box .image4.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib4.jpg);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb4 .image-box .image4:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -321,17 +353,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb5 .image-box .image {
+.body-container .body-overview .mdb5 .image-box .image5 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib5.jpg);
+    background-image: url(../images/exib5-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb5 .image-box .image:hover {
+.body-container .body-overview .mdb5 .image-box .image5.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib5.jpg);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb5 .image-box .image5:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -356,17 +396,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb6 .image-box .image {
+.body-container .body-overview .mdb6 .image-box .image6 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib6.jpg);
+    background-image: url(../images/exib6-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb6 .image-box .image:hover {
+.body-container .body-overview .mdb6 .image-box .image6.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib6.jpg);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb6 .image-box .image6:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -391,17 +439,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb7 .image-box .image {
+.body-container .body-overview .mdb7 .image-box .image7 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib7.gif);
+    background-image: url(../images/exib7-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb7 .image-box .image:hover {
+.body-container .body-overview .mdb7 .image-box .image7.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib7.gif);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb7 .image-box .image7:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -426,17 +482,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb8 .image-box .image {
+.body-container .body-overview .mdb8 .image-box .image8 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib8.gif);
+    background-image: url(../images/exib8-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb8 .image-box .image:hover {
+.body-container .body-overview .mdb8 .image-box .image8.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib8.gif);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb8 .image-box .image8:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -461,17 +525,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb9 .image-box .image {
+.body-container .body-overview .mdb9 .image-box .image9 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib9.jpg);
+    background-image: url(../images/exib9-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb9 .image-box .image:hover {
+.body-container .body-overview .mdb9 .image-box .image9.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib9.jpg);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb9 .image-box .image9:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -496,17 +568,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb10 .image-box .image {
+.body-container .body-overview .mdb10 .image-box .image10 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib10.png);
+    background-image: url(../images/exib10-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb10 .image-box .image:hover {
+.body-container .body-overview .mdb10 .image-box .image10.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib10.png);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb10 .image-box .image10:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -531,17 +611,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb11 .image-box .image {
+.body-container .body-overview .mdb11 .image-box .image11 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib11.gif);
+    background-image: url(../images/exib11-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb11 .image-box .image:hover {
+.body-container .body-overview .mdb11 .image-box .image11.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib11.gif);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb11 .image-box .image11:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -566,17 +654,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb12 .image-box .image {
+.body-container .body-overview .mdb12 .image-box .image12 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib12.png);
+    background-image: url(../images/exib12-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb12 .image-box .image:hover {
+.body-container .body-overview .mdb12 .image-box .image12.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib12.png);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb12 .image-box .image12:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
@@ -601,17 +697,25 @@ article {
     overflow: hidden;
 }
 
-.body-container .body-overview .mdb13 .image-box .image {
+.body-container .body-overview .mdb13 .image-box .image13 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/exib13.jpg);
+    background-image: url(../images/exib13-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    transition: background-image 0.5s ease;
+    filter: blur(30px);
+    transition: filter 1s ease;
 }
 
-.body-container .body-overview .mdb13 .image-box .image:hover {
+.body-container .body-overview .mdb13 .image-box .image13.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/exib13.jpg);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb13 .image-box .image13:hover {
     transform: scale(1.1);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
 }
