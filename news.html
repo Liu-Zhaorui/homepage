@@ -202,6 +202,19 @@
     <script>
         const html = document.querySelector('html');
         const fullScreenBtn = document.getElementById('full-screen-btn');
+
+        const mdb1 = document.querySelector('.mdb1');
+        
+        const img = new Image();
+        img.src = '/images/news1.png';
+
+        
+        img.onload = () => {
+          mdb1.classList.add('loaded');
+        };
+
+        console.log("change");
+
         fullScreenBtn.onclick = () => {
           html.requestFullscreen()
             .then(() => {
@@ -212,6 +225,7 @@
             })
         }
     </script>
+      
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
