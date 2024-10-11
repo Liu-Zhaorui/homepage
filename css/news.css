@@ -142,17 +142,16 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    background-image: url(../images/news1.png);
+    background-image: url(../images/news1-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(20px);
-    transition: filter 0.5s ease;
+    transition: background-image 0.5s ease;
 }
 
 .body-container .body-overview .mdb1.loaded {
     transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    filter: blur(0);
+    background-image: url(../images/news1.png);
 }
 
 .body-container .body-overview .mdb1:hover {

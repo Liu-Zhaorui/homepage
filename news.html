@@ -209,7 +209,7 @@
         const mdb4 = document.querySelector('.mdb4');
         const mdb5 = document.querySelector('.mdb5');
         const mdb6 = document.querySelector('.mdb6');
-        const mdb7 = document.querySelector('.mdb1');
+        const mdb7 = document.querySelector('.mdb7');
         
         const img1 = new Image();
         const img2 = new Image();
@@ -246,9 +246,8 @@
         };
         img7.onload = () => {
             mdb7.classList.add('loaded');
+            console.log("change");
         };
-
-        console.log("change");
 
         fullScreenBtn.onclick = () => {
           html.requestFullscreen()
