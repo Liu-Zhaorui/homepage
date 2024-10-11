@@ -218,11 +218,17 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
     background-image: url(../images/news2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    filter: blur(20px);
+    transition: filter 0.5s ease;
+}
+
+.body-container .body-overview .mdb2.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb2:hover {
@@ -248,11 +254,17 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
     background-image: url(../images/news3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    filter: blur(20px);
+    transition: filter 0.5s ease;
+}
+
+.body-container .body-overview .mdb3.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb3:hover {
@@ -278,11 +290,17 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
     background-image: url(../images/news4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    filter: blur(20px);
+    transition: filter 0.5s ease;
+}
+
+.body-container .body-overview .mdb4.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb4:hover {
@@ -308,11 +326,17 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
     background-image: url(../images/news5.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    filter: blur(20px);
+    transition: filter 0.5s ease;
+}
+
+.body-container .body-overview .mdb5.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb5:hover {
@@ -338,11 +362,17 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
     background-image: url(../images/news6.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    filter: blur(20px);
+    transition: filter 0.5s ease;
+}
+
+.body-container .body-overview .mdb6.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb6:hover {
@@ -368,11 +398,17 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
     background-image: url(../images/news7.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    filter: blur(20px);
+    transition: filter 0.5s ease;
+}
+
+.body-container .body-overview .mdb7.loaded {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb7:hover {

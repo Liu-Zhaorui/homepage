@@ -204,13 +204,48 @@
         const fullScreenBtn = document.getElementById('full-screen-btn');
 
         const mdb1 = document.querySelector('.mdb1');
+        const mdb2 = document.querySelector('.mdb2');
+        const mdb3 = document.querySelector('.mdb3');
+        const mdb4 = document.querySelector('.mdb4');
+        const mdb5 = document.querySelector('.mdb5');
+        const mdb6 = document.querySelector('.mdb6');
+        const mdb7 = document.querySelector('.mdb1');
         
-        const img = new Image();
-        img.src = 'images/news1.png';
-
+        const img1 = new Image();
+        const img2 = new Image();
+        const img3 = new Image();
+        const img4 = new Image();
+        const img5 = new Image();
+        const img6 = new Image();
+        const img7 = new Image();
+        img1.src = 'images/news1.png';
+        img2.src = 'images/news2.jpg';
+        img3.src = 'images/news3.jpg';
+        img4.src = 'images/news4.jpg';
+        img5.src = 'images/news5.png';
+        img6.src = 'images/news6.png';
+        img7.src = 'images/news7.png';
         
-        img.onload = () => {
-          mdb1.classList.add('loaded');
+        img1.onload = () => {
+            mdb1.classList.add('loaded');
+        };
+        img2.onload = () => {
+            mdb2.classList.add('loaded');
+        };
+        img3.onload = () => {
+            mdb3.classList.add('loaded');
+        };
+        img4.onload = () => {
+            mdb4.classList.add('loaded');
+        };
+        img5.onload = () => {
+            mdb5.classList.add('loaded');
+        };
+        img6.onload = () => {
+            mdb6.classList.add('loaded');
+        };
+        img7.onload = () => {
+            mdb7.classList.add('loaded');
         };
 
         console.log("change");
