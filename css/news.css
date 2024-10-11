@@ -147,11 +147,14 @@ article {
     background-size: cover;
     background-position: center;
     transition: background-image 0.5s ease;
+    filter: blur(50px);
+    transition: filter 1s ease;
 }
 
 .body-container .body-overview .mdb1.loaded {
     transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
     background-image: url(../images/news1.png);
+    filter: blur(0);
 }
 
 .body-container .body-overview .mdb1:hover {
@@ -217,16 +220,18 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    background-image: url(../images/news2.jpg);
+    background-image: url(../images/news2-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(20px);
-    transition: filter 0.5s ease;
+    transition: background-image 0.5s ease;
+    filter: blur(50px);
+    transition: filter 1s ease;
 }
 
 .body-container .body-overview .mdb2.loaded {
     transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/news2.jpg);
     filter: blur(0);
 }
 
@@ -253,16 +258,18 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    background-image: url(../images/news3.jpg);
+    background-image: url(../images/news3-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(20px);
-    transition: filter 0.5s ease;
+    transition: background-image 0.5s ease;
+    filter: blur(50px);
+    transition: filter 1s ease;
 }
 
 .body-container .body-overview .mdb3.loaded {
     transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/news3.jpg);
     filter: blur(0);
 }
 
@@ -289,16 +296,18 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    background-image: url(../images/news4.jpg);
+    background-image: url(../images/news4-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(20px);
-    transition: filter 0.5s ease;
+    transition: background-image 0.5s ease;
+    filter: blur(50px);
+    transition: filter 1s ease;
 }
 
 .body-container .body-overview .mdb4.loaded {
     transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/news4.jpg);
     filter: blur(0);
 }
 
@@ -329,8 +338,8 @@ article {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(20px);
-    transition: filter 0.5s ease;
+    filter: blur(50px);
+    transition: filter 1s ease;
 }
 
 .body-container .body-overview .mdb5.loaded {
@@ -361,16 +370,18 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    background-image: url(../images/news6.png);
+    background-image: url(../images/news6-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(20px);
-    transition: filter 0.5s ease;
+    transition: background-image 0.5s ease;
+    filter: blur(50px);
+    transition: filter 1s ease;
 }
 
 .body-container .body-overview .mdb6.loaded {
     transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/news6.png);
     filter: blur(0);
 }
 
@@ -397,16 +408,18 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    background-image: url(../images/news7.png);
+    background-image: url(../images/news7-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    filter: blur(20px);
-    transition: filter 0.5s ease;
+    transition: background-image 0.5s ease;
+    filter: blur(50px);
+    transition: filter 1s ease;
 }
 
 .body-container .body-overview .mdb7.loaded {
     transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/news7.png);
     filter: blur(0);
 }
 
