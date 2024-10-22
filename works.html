@@ -74,6 +74,18 @@
                     <h1>
                         <span>Works</span>
                     </h1>
+                    <a href="./works/digidi.html">
+                        <div class="mdb19">
+                            <div class="mingcheng">
+                                <p class="mingcheng1">DigiDi</p>
+                                <p class="mingcheng2">数字竹笛乐器DigiDi</p>
+                                <p class="mingcheng3">2024.10</p>
+                                <p class="mingcheng4">数字竹笛乐器</p>
+                                <p class="mingcheng4">(Digital Musical Instrument Bambu Flute)</p>
+                            </div>
+                            <div class="mengban"></div>
+                        </div>
+                    </a>
                     <a href="./works/livecoding.html">
                         <div class="mdb18">
                             <div class="mingcheng">
@@ -137,11 +149,11 @@
                     <a href="./works/citysound.html">
                         <div class="mdb13">
                             <div class="mingcheng">
-                                <p class="mingcheng1">CitySound</p>
+                                <p class="mingcheng1">Low-Tech CitySound</p>
                                 <p class="mingcheng2">音城</p>
                                 <p class="mingcheng3">2024.5--2024.6</p>
-                                <p class="mingcheng4">参与式视角中的龙岗声音——互动音视频装置</p>
-                                <p class="mingcheng4">(Participatory Perspectives on the Sound of Longgang — Interactive Sound & Video Installation)</p>
+                                <p class="mingcheng4">参与式视角中的深圳声音——互动音视频装置</p>
+                                <p class="mingcheng4">(Participatory Perspectives on the Sound of Shenzhen — Interactive Sound & Video Installation)</p>
                             </div>
                             <div class="mengban"></div>
                         </div>
@@ -354,6 +366,7 @@
         const mdb16 = document.querySelector('.mdb16');
         const mdb17 = document.querySelector('.mdb17');
         const mdb18 = document.querySelector('.mdb18');
+        const mdb19 = document.querySelector('.mdb19');
         
         const img1 = new Image();
         const img2 = new Image();
@@ -373,6 +386,7 @@
         const img16 = new Image();
         const img17 = new Image();
         const img18 = new Image();
+        const img19 = new Image();
         img1.src = 'images/octoqin.png';
         img2.src = 'images/cosmusica.png';
         img3.src = 'images/ccmusic.jpg';
@@ -391,6 +405,7 @@
         img16.src = 'images/city.png';
         img17.src = 'images/appleworkshop.jpg';
         img18.src = 'images/bg1.png';
+        img19.src = 'images/bg1.png';
         
         img1.onload = () => {
             mdb1.classList.add('loaded');
@@ -448,6 +463,10 @@
         img18.onload = () => {
             mdb18.classList.add('loaded');
         };
+        img19.onload = () => {
+            mdb19.classList.add('loaded');
+        };
+
 
         fullScreenBtn.onclick = () => {
           html.requestFullscreen()
