@@ -211,6 +211,42 @@ article {
     background-position: center;
 }
 
+.body-container .body-overview .boch .image-box .image-6 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../materials/evsound8.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .boch .image-box .image-7 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../materials/evsound9.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .boch .image-box .image-8 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../materials/evsound10.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .boch .image-box .image-9 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../materials/evsound11.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 .body-container .body-overview .mingcheng {
     position: relative;
     width: 100%;
