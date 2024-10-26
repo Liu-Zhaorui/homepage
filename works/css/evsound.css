@@ -149,6 +149,103 @@ article {
     overflow: visible;
 }
 
+.body-container .body-overview .boch .player1 {
+    position: absolute;
+    right: 50px;
+    top: 0;
+}
+
+.body-container .body-overview .boch .player1 button {
+    background: none;
+    border-radius: 50%;
+    padding: 0;
+    border: 0;
+}
+
+.body-container .body-overview .boch .player1 button img {
+    width: 64px;
+    height: 64px;
+}
+
+.body-container .body-overview .boch .player1 button .play {
+    animation: spin 4s infinite linear;
+}
+
+.body-container .body-overview .boch .player2 {
+    position: absolute;
+    right: 150px;
+    top: 0;
+}
+
+.body-container .body-overview .boch .player2 button {
+    background: none;
+    border-radius: 50%;
+    padding: 0;
+    border: 0;
+}
+
+.body-container .body-overview .boch .player2 button img {
+    width: 64px;
+    height: 64px;
+}
+
+.body-container .body-overview .boch .player2 button .play {
+    animation: spin 4s infinite linear;
+}
+
+.body-container .body-overview .boch .player3 {
+    position: absolute;
+    right: 50px;
+    top: 0;
+}
+
+.body-container .body-overview .boch .player3 button {
+    background: none;
+    border-radius: 50%;
+    padding: 0;
+    border: 0;
+}
+
+.body-container .body-overview .boch .player3 button img {
+    width: 64px;
+    height: 64px;
+}
+
+.body-container .body-overview .boch .player3 button .play {
+    animation: spin 4s infinite linear;
+}
+
+.body-container .body-overview .boch .player4 {
+    position: absolute;
+    right: 50px;
+    top: 0;
+}
+
+.body-container .body-overview .boch .player4 button {
+    background: none;
+    border-radius: 50%;
+    padding: 0;
+    border: 0;
+}
+
+.body-container .body-overview .boch .player4 button img {
+    width: 64px;
+    height: 64px;
+}
+
+.body-container .body-overview .boch .player4 button .play {
+    animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .body-container .body-overview .boch .image-box {
     height: 400px;
     width: 100%;

@@ -161,6 +161,12 @@
                         <div class="mingcheng" style="width: 65%;">
                             <p class="mingcheng1">Data Collection</p>
                             <p class="mingcheng1">Inside</p>
+                            <p id="player" class="player1">
+                                <button id="player-button1">
+                                    <img class="player-image1 play" src="./materials/vinyl3.png">
+                                </button>
+                                <audio loop class="audio1" src="./audioclips/evsound4.mp3"></audio>
+                            </p>
                             <p class="mingcheng2">
                                 Use RØDE NT-SF1 Ambisonic Microphone to record spatial audio inside the car, ZOOM H6 recorder to record Stereo audio, and SMARTSENSOR AR844 Decibel Meter to measure the decibel level of the environment. The RØDE NT-SF1 is held by Passenger 3 in the back seat of the car and placed in the middle position between the Driver and Passenger 1, and connected to the Mixer(PreMix-6 II) using wires, record the Ambix format and Fuma format at the same time; The ZOOM H6 recorder is held by Passenger 2 in the back seat of the car and placed near Driver's ear; The Decibel Meter is held by Passenger 1 in the front seat of the car.
                             </p>
@@ -172,6 +178,18 @@
                         </div>
                         <div class="mingcheng" style="width: 65%;">
                             <p class="mingcheng1">Outside</p>
+                            <p id="player" class="player2">
+                                <button id="player-button2">
+                                    <img class="player-image2 play" src="./materials/vinyl3.png">
+                                </button>
+                                <audio loop class="audio2" src="./audioclips/evsound1.mp3"></audio>
+                            </p>
+                            <p id="player" class="player3">
+                                <button id="player-button3">
+                                    <img class="player-image3 play" src="./materials/vinyl3.png">
+                                </button>
+                                <audio loop class="audio3" src="./audioclips/evsound2.mp3"></audio>
+                            </p>
                             <p class="mingcheng2">
                                 Use RØDE NT-SF1 Ambisonic Microphone to record spatial audio outside the car, ZOOM H6 recorder to record Stereo audio, and SMARTSENSOR AR844 Decibel Meter to measure the decibel level of the environment. The RØDE NT-SF1 is mounted on the stand at a height of 1.6 m from the ground and also connected to the Mixer(PreMix-6 II) using wires, record the Ambix format and Fuma format at the same time; The ZOOM H6 recorder is mounted on the stand at a height of 1.6 m from the ground. The Decibel Meter is held by Pedestrian at a height of 1.6 m from the ground.
                             </p>
@@ -180,6 +198,12 @@
                     <div class="boch" style="margin-top: 50px;">
                         <div class="mingcheng" style="width: 55%;">
                             <p class="mingcheng1">Recording Post-Process</p>
+                            <p id="player" class="player4">
+                                <button id="player-button4">
+                                    <img class="player-image4 play" src="./materials/vinyl3.png">
+                                </button>
+                                <audio loop class="audio4" src="./audioclips/evsound3.mp3"></audio>
+                            </p>
                             <p class="mingcheng2">
                                 The sound recording use the RØDE NT-SF1 Ambisonic Microphone needs to be processed before it can be used normally. The digital audio workstation REAPER and SoundField by RØDE VST plugin are used for post-processing spatial audio recording. Import the audio file into REAPER and open the SoundField by RØDE plugin. Select the corresponding audio input format based on the recording format. Here, choose the B-format(Ambix) format and set the microphone placement to Upright. Set the audio output format to Stereo, so that it can be monitored through headphones.
                             </p>
@@ -335,5 +359,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/evsound-audio.js"></script>
 </body>
 </html>
