@@ -169,13 +169,22 @@ article {
 .body-container .body-overview .boch .image-box .image-1 {
     height: 100%;
     width: 100%;
-    background-image: url(../materials/·_·1.jpg);
+    background-image: url(../materials/digidi3.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
-.body-container .body-overview .boch .image-box .image-5 {
+.body-container .body-overview .boch .image-box .image-2 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../materials/digidi4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.body-container .body-overview .boch .image-box .image-4 {
     height: 100%;
     width: 100%;
     background-image: url(../materials/digidi5.jpg);
@@ -184,7 +193,7 @@ article {
     background-position: center;
 }
 
-.body-container .body-overview .boch .image-box .image-6 {
+.body-container .body-overview .boch .image-box .image-5 {
     height: 100%;
     width: 100%;
     background-image: url(../materials/digidi6.png);

@@ -866,7 +866,7 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    background-image: url(../images/bg1.png);
+    background-image: url(../images/digidi-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -877,7 +877,7 @@ article {
 
 .body-container .body-overview .mdb19.loaded {
     transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/bg1.png);
+    background-image: url(../images/digidi.JPG);
     filter: blur(0);
 }
 
