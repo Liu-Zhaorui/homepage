@@ -74,6 +74,22 @@
                     <h1>
                         <span>Exibitions</span>
                     </h1>
+                    <div class="mdb14">
+                        <div class="image-box">
+                            <div class="image14"></div>
+                        </div>
+                        <div class="mingcheng">
+                            <p class="mingcheng1">ATLAS - Weaving Feather 艾德莱斯·织羽 & CitySound 音城</p>
+                            <p class="mingcheng2">The 12th International Symposium of Chinese CHI Art Gallery</p>
+                            <p class="mingcheng3">Date: NOV 2024</p>
+                            <p class="mingcheng3">Place: Southern University of Science and Technology, Shenzhen, China</p>
+                            <p class="mingcheng3">Materials: computers, speakers, projector, DIY circuit</p>
+                            <p class="mingcheng3">Presented by International Chinese Association of CHI & School of Design, Southern University of Science and Technology</p>
+                            <p class="mingcheng4">
+                                <a href="http://chchi.icachi.org/24/" target="_blank">more>></a>
+                            </p>
+                        </div>
+                    </div>
                     <div class="mdb13">
                         <div class="image-box">
                             <div class="image13"></div>
@@ -344,6 +360,7 @@
         const mdb11 = document.querySelector('.image11');
         const mdb12 = document.querySelector('.image12');
         const mdb13 = document.querySelector('.image13');
+        const mdb14 = document.querySelector('.image14');
         
         const img1 = new Image();
         const img2 = new Image();
@@ -358,6 +375,7 @@
         const img11 = new Image();
         const img12 = new Image();
         const img13 = new Image();
+        const img14 = new Image();
         img1.src = 'images/exib1.jpg';
         img2.src = 'images/exib2.png';
         img3.src = 'images/exib3.png';
@@ -371,6 +389,7 @@
         img11.src = 'images/exib11.gif';
         img12.src = 'images/exib12.png';
         img13.src = 'images/exib13.jpg';
+        img14.src = 'images/exib14.png';
         
         img1.onload = () => {
             mdb1.classList.add('loaded');
@@ -410,6 +429,9 @@
         };
         img13.onload = () => {
             mdb13.classList.add('loaded');
+        };
+        img14.onload = () => {
+            mdb14.classList.add('loaded');
         };
 
         fullScreenBtn.onclick = () => {

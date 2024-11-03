@@ -74,19 +74,51 @@
                     <h1>
                         <span>Workshops</span>
                     </h1>
+                    <div class="mdb6">
+                        <div class="image-box">
+                            <div class="image6"></div>
+                        </div>
+                        <div class="mingcheng">
+                            <p class="mingcheng1">城市声境：城市声音日志的交互数据可视化工作坊</p>
+                            <p class="mingcheng2">Exploring Urban Soundscapes: Interactive Data Visualization with "Urban Sound Diary" Workshop</p>
+                            <p class="mingcheng3">Date: NOV 22, 2024</p>
+                            <p class="mingcheng3">Place: Southern University of Science and Technology, Shenzhen</p>
+                            <p class="mingcheng3">Content: This hands-on workshop aims to engage participants in exploring and manipulating urban sound data using the "Urban Sound Diary" app. Through practical exercises, attendees will gain an understanding of the relationship between sound, urban life, computational sound analysis, and data visualization techniques.</p>
+                            <p class="mingcheng3">Presented by Chinese CHI 2024 & Southern University of Science and Technology</p>
+                            <p class="mingcheng4">
+                                <a href="./works/urbansounddiary.html" target="_blank">more>></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mdb5">
+                        <div class="image-box">
+                            <div class="image5"></div>
+                        </div>
+                        <div class="mingcheng">
+                            <p class="mingcheng1">基于苹果操作系统的电子音乐共创工作坊</p>
+                            <p class="mingcheng2">Electronic Music Co-Creation Workshop Based on Apple Operation System</p>
+                            <p class="mingcheng3">Date: NOV 16, 2024</p>
+                            <p class="mingcheng3">Place: Beijing</p>
+                            <p class="mingcheng3">Content: </p>
+                            <p class="mingcheng3">Presented by Central Conservatory of Music & APPLE Company</p>
+                            <p class="mingcheng4">
+                                <a href="./works/appleworkshop.html" target="_blank">more>></a>
+                            </p>
+                        </div>
+                    </div>
                     <div class="mdb4">
                         <div class="image-box">
                             <div class="image4"></div>
                         </div>
                         <div class="mingcheng">
-                            <p class="mingcheng1">中央音乐学院 × APPLE 电子音乐共创工作坊</p>
-                            <p class="mingcheng2">Electronic Music Workshop</p>
-                            <p class="mingcheng3">Date: OCT 26, 2024</p>
-                            <p class="mingcheng3">Place: Beijing</p>
-                            <p class="mingcheng3">Content: </p>
-                            <p class="mingcheng3">Presented by Central Conservatory of Music & APPLE Company</p>
+                            <p class="mingcheng1">电子创客 & 低科技 & "音城"工作坊</p>
+                            <p class="mingcheng2">“音城CitySound” - Electronics Maker & Low Tech & City Sounds Workshop</p>
+                            <p class="mingcheng3">Date: MAY 18, 2024</p>
+                            <p class="mingcheng3">Place: 龙城 CC SeeDling, Shenzhen</p>
+                            <p class="mingcheng3">Content: The workshop participants will learn to build their own sound recording device and choose a custom shape for it.  These devices look like electronics, quite low tech, but they have high-tech functionality and can record, store, playback, and present sound recordings.</p>
+                            <p class="mingcheng3">Presented by 龙城 CC SeeDling & Southern University of Science and Technology</p>
                             <p class="mingcheng4">
-                                <a href="#" target="_blank">more>></a>
+                                <a href="./works/citysound.html" target="_blank">more>></a>
                             </p>
                         </div>
                     </div>
@@ -191,15 +223,21 @@
         const mdb2 = document.querySelector('.image2');
         const mdb3 = document.querySelector('.image3');
         const mdb4 = document.querySelector('.image4');
+        const mdb5 = document.querySelector('.image5');
+        const mdb6 = document.querySelector('.image6');
         
         const img1 = new Image();
         const img2 = new Image();
         const img3 = new Image();
         const img4 = new Image();
+        const img5 = new Image();
+        const img6 = new Image();
         img1.src = 'works/materials/octoqin2.jpg';
         img2.src = 'images/accessible-low.jpg';
         img3.src = 'images/csde.png';
         img4.src = 'images/appleworkshop.jpg';
+        img5.src = 'images/appleworkshop.jpg';
+        img6.src = 'images/city.png';
         
         img1.onload = () => {
             mdb1.classList.add('loaded');
@@ -212,6 +250,12 @@
         };
         img4.onload = () => {
             mdb4.classList.add('loaded');
+        };
+        img5.onload = () => {
+            mdb5.classList.add('loaded');
+        };
+        img6.onload = () => {
+            mdb6.classList.add('loaded');
         };
 
         fullScreenBtn.onclick = () => {
