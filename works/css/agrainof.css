@@ -209,7 +209,7 @@ article {
 .body-container .body-overview .boch .image-box .image-2 {
     height: 100%;
     width: 100%;
-    background-image: url(../materials/citysound10.png);
+    background-image: url(../materials/ago8.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -218,7 +218,7 @@ article {
 .body-container .body-overview .boch .image-box .image-3 {
     height: 100%;
     width: 100%;
-    background-image: url(../materials/citysound2.jpg);
+    background-image: url(../materials/ago9.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -227,7 +227,7 @@ article {
 .body-container .body-overview .boch .image-box .image-4 {
     height: 100%;
     width: 100%;
-    background-image: url(../materials/citysound4.png);
+    background-image: url(../materials/ago6.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -235,17 +235,9 @@ article {
 
 .body-container .body-overview .boch .image-box .image-5 {
     height: 100%;
-    width: 100%;
-    background-image: url(../materials/citysound6.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.body-container .body-overview .boch .image-box .image-6 {
-    height: 100%;
-    width: 100%;
-    background-image: url(../materials/citysound8.jpg);
+    width: 60%;
+    margin: 0 0 0 calc(20%);
+    background-image: url(../materials/logo12.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

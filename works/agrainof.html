@@ -74,13 +74,17 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                 </ol>
                 <div class="carousel-inner" style="height:100%;">
                     <div class="carousel-item active" data-interval="3000">
                         <img src="materials/ago1.jpg" class="d-block w-100">
                     </div>
                     <div class="carousel-item" data-interval="3000">
-                        <img src="materials/ago3.jpg" class="d-block w-100">
+                        <img src="materials/ago5.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-interval="3000">
+                        <img src="materials/ago11.jpg" class="d-block w-100">
                     </div>
                     <div class="carousel-item" data-interval="3000">
                         <img src="materials/ago4.jpg" class="d-block w-100">
@@ -108,7 +112,7 @@
                             <p class="mingcheng2" style="margin: 0;">Yiyuan Bai | Bo Dong</p>
                             <p class="mingcheng2" style="margin: 0;">Zhiyi Zhang | Zhaorui Liu</p>
                             <p class="mingcheng2" style="margin: 0;">Minghim Tong | Simeng Wang</p>
-                            <p class="mingcheng2" style="margin: 0;">Zichun Xiao | Zhonghui Tang</p>
+                            <p class="mingcheng2" style="margin: 0;">Zichun Xia | Zhonghui Tang</p>
                         </div>
                         <div class="mingcheng" style="text-align: center;">
                             <p class="mingcheng1" style="line-height: 1.25em; font-weight: 900;">MY ROLE</p>
@@ -145,27 +149,43 @@
                     </div>
                     <div class="boch" style="margin-top: 20px;">
                         <div class="mingcheng">
+                            <p class="mingcheng1">Fieldwork Recording</p>
                             <p class="mingcheng2">
-                                The projects on display are based on the results created by the workshop "CitySound". In this workshop, participants learnt to make their own recording equipment and choose a custom shape for it. These devices look like low-tech electronics but have high-tech features that allow them to record, store, playback, and display recordings. At the same time, they observed the electrical signals in the circuit through an oscilloscope, to visualize the audio. Showing the combination and clash of low technology and high technology.
+                                This project uses multiple microphones to collect sound:
+                            </p>
+                            <p class="mingcheng2" style="text-align: center;">
+                                RODE BLIMP shotgun
+                            </p>
+                            <p class="mingcheng2" style="text-align: center;">
+                                Sennheiser AMBEO VR MIC
+                            </p>
+                            <p class="mingcheng2" style="text-align: center;">
+                                AKG C411 PP
+                            </p>
+                            <p class="mingcheng2" style="text-align: center;">
+                                Zoom H3-VR
+                            </p>
+                            <p class="mingcheng2" style="text-align: center;">
+                                WILDLIFE ACOUSTICS
                             </p>
                         </div>
                     </div>
                     <div class="boch">
-                        <div class="image-box">
+                        <div class="image-box" style="height: 600px; width: 100%;">
                             <div class="image-2"></div>
                         </div>
                     </div>
                     <div class="boch" style="margin-top: 50px;">
                         <div class="mingcheng" style="width: 55%;">
-                            <p class="mingcheng1">DIY Sound Recorders</p>
+                            <p class="mingcheng1">Sound Visualization - Spectrogram</p>
                             <p id="player" class="player elements">
                                 <button id="player-button">
-                                    <img class="player-image play" src="./materials/vinyl2.png">
+                                    <img class="player-image play" src="./materials/vinyl3.png">
                                 </button>
-                                <audio loop class="audio" src="./audioclips/citysound.mp3"></audio>
+                                <audio loop class="audio" src="./audioclips/agrainof.mp3"></audio>
                             </p>
                             <p class="mingcheng2">
-                                On the topic of “CitySound”, the workshop participants learnt to build their own sound recording device and choose a custom shape for it. These devices look like electronics, quite low tech, but they have high-tech functionality and can record, store, playback, and present sound recordings. It’s a device in which low tech meets high tech. The participants will then explore the nearby streets and collect “City Sounds.” While walking, participants learn to listen to the city sound through technology, and they will understand how technology changes the way they listen.
+                                Each recording undergoes detailed processing to extract nuanced details, ranging from the gentle flow of water streams to the bustling noise of construction activities that portrait human traces. Following the completion of sound sampling, recordings are analyzed using Sonic Visualiser(a software that quantifies and analyzes sound to image), which generates chromatogram and black-and-white spectrogram images derived from the level values of the audio samples. These images are then employed as procedural textures in Blender to texture our collected sample 3D models. The primary mesh is physically displaced by the power of frequency and the highest values are adopted as a falloff map and marked by a different shader. Now, we have 25 unique sound matter that exhibit crystallized surfaces, physically embody the sound textures, while preserving the original sample structure. We decided to print these objects with 3d printing materials of black resin and transparent resin.     
                             </p>
                         </div>
                         <div class="image-box" style="width: 45%;">
@@ -173,24 +193,23 @@
                         </div>
                     </div>
                     <div class="boch" style="margin-top: 50px;">
-                        <div class="image-box" style="width: 45%;">
+                        <div class="image-box" style="width: 25%;">
                             <div class="image-4"></div>
                         </div>
-                        <div class="mingcheng" style="width: 55%;">
-                            <p class="mingcheng1">Interaction Interface</p>
+                        <div class="mingcheng" style="width: 75%;">
+                            <p class="mingcheng1">Hardware Integration</p>
                             <p class="mingcheng2">
-                                The audience clicks on the interactive sound device to listen to and experience the sound works recorded and produced by the workshop participants. It demonstrates different participants’ understanding of sound, high-tech and low-tech, and “sound city”, and also explores how technology and cities are always connected in diverse ways.
+                                To foster interaction between 3d-printed crystallized objects and their audience, integrating sound speakers and vibration motors further demonstrate the relationship between materialities and sound. We use DFPlayer Mini and integrated circuits to simultaneously control multiple speakers and transducers to produce different sounds, and these sound modules are stably embedded in 3D printed objects. Each sound module will play sound samples corresponding to the object.
                             </p>
                         </div>
                     </div>
-                    <div class="boch" style="margin-top: 50px;">
-                        <div class="mingcheng" style="width: 100%;">
-                            <p class="mingcheng1">Photos by: Bai Yiyuan</p>
-                        </div>
-                    </div>
-                    <div class="boch" style="margin-top: 0;">
-                        <div class="image-box" style="height: 800px; width: 100%;">
-                            <div class="image-5"></div>
+                    <div class="boch">
+                        <div class="mingcheng" style="margin-top: 50px; width: 75%;">
+                            <p class="mingcheng1">Related Papers</p>
+                            <p class="mingcheng2">
+                                E. Migliore, M. Sagesser, Ma Y.(2024) The Grain No. 12/11 W4 102 1 From the City: Integrating a 3D Model with Audio Data as an Experimental Creative Method. Proceeding of International Symposium on Visual Information Communication and Interaction(VINCI) 2024, 9-13 December, Taiwan, China. 
+                                <a href="https://dl.designresearchsociety.org/iasdr/iasdr2023/fullpapers/63/" target="_blank">doi</a>
+                            </p>
                         </div>
                     </div>
                     <div class="boch" style="margin-top: 80px;">
@@ -254,7 +273,7 @@
                 </div>
             </div>
             <div class="foot-bottom">
-                Copyright © 2019-2024, Zhaorui Liu 刘兆蕤
+                Copyright © 2019-2025, Zhaorui Liu 刘兆蕤
             </div>
         </footer>
     </div>
@@ -273,6 +292,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/citysound-audio.js"></script>
+    <script src="./js/agrainof-audio.js"></script>
 </body>
 </html>

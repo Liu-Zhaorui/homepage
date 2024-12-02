@@ -220,6 +220,16 @@ article {
     background-position: center;
 }
 
+.body-container .body-overview .boch .image-box .image-7 {
+    height: 100%;
+    width: 60%;
+    margin: 0 0 0 calc(20%);
+    background-image: url(../materials/logo12.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 .body-container .body-overview .mingcheng {
     position: relative;
     width: 100%;
