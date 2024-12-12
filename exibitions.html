@@ -138,6 +138,22 @@
                             </p>
                         </div>
                     </div>
+                    <div class="mdb15">
+                        <div class="image-box">
+                            <div class="image15"></div>
+                        </div>
+                        <div class="mingcheng">
+                            <p class="mingcheng1">A Grain Of 一粟</p>
+                            <p class="mingcheng2">2024 深圳设计周 Shenzhen Design Week</p>
+                            <p class="mingcheng3">Date: APR 2024 - MAY 2024</p>
+                            <p class="mingcheng3">Place: Nanshan Museum, Nanshan District, Shenzhen, Guangdong</p>
+                            <p class="mingcheng3">Materials: computers, loudspeakers, LED screen, PCB board, 3D print objects</p>
+                            <p class="mingcheng3">Presented by Shenzhen Municipal People's Government</p>
+                            <p class="mingcheng4">
+                                <a href="https://www.sz.design/" target="_blank">more>></a>
+                            </p>
+                        </div>
+                    </div>
                     <div class="mdb8">
                         <div class="image-box">
                             <div class="image8"></div>
@@ -361,6 +377,7 @@
         const mdb12 = document.querySelector('.image12');
         const mdb13 = document.querySelector('.image13');
         const mdb14 = document.querySelector('.image14');
+        const mdb15 = document.querySelector('.image15');
         
         const img1 = new Image();
         const img2 = new Image();
@@ -376,6 +393,7 @@
         const img12 = new Image();
         const img13 = new Image();
         const img14 = new Image();
+        const img15 = new Image();
         img1.src = 'images/exib1.jpg';
         img2.src = 'images/exib2.png';
         img3.src = 'images/exib3.png';
@@ -390,6 +408,7 @@
         img12.src = 'images/exib12.png';
         img13.src = 'images/exib13.jpg';
         img14.src = 'images/exib14.png';
+        img15.src = 'images/ago1.jpg';
         
         img1.onload = () => {
             mdb1.classList.add('loaded');
@@ -432,6 +451,9 @@
         };
         img14.onload = () => {
             mdb14.classList.add('loaded');
+        };
+        img15.onload = () => {
+            mdb15.classList.add('loaded');
         };
 
         fullScreenBtn.onclick = () => {

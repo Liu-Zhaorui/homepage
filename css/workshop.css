@@ -420,3 +420,46 @@ article {
 }
 
 /* ---------------------------------------------------------------- */
+
+.body-container .body-overview .mdb7 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin: 20px 0;
+    height: 400px;
+    width: 95%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.body-container .body-overview .mdb7 .image-box {
+    height: 100%;
+    width: 45%;
+    overflow: hidden;
+}
+
+.body-container .body-overview .mdb7 .image-box .image7 {
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/flow-low.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+    filter: blur(20px);
+    transition: filter 1s ease;
+}
+
+.body-container .body-overview .mdb7 .image-box .image7.loaded  {
+    transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
+    background-image: url(../images/flow.jpg);
+    filter: blur(0);
+}
+
+.body-container .body-overview .mdb7 .image-box .image7:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .2);
+}
+
+/* ---------------------------------------------------------------- */
