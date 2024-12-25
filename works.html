@@ -37,7 +37,7 @@
                             <a class="nav-link" href="works.html" style="font-weight: 600; color: rgba(255, 255, 255, 0.7);">Works</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="exibitions.html">Exibitions</a>
+                            <a class="nav-link" href="exhibitions.html">Exhibitions</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="live.html">Live</a>
@@ -74,6 +74,18 @@
                     <h1>
                         <span>Works</span>
                     </h1>
+                    <a href="./works/flowingsound.html">
+                        <div class="mdb21">
+                            <div class="mingcheng">
+                                <p class="mingcheng1">Flowing Sound</p>
+                                <p class="mingcheng2">流动声音</p>
+                                <p class="mingcheng3">2024.12--2025.1</p>
+                                <p class="mingcheng4">深圳便携式低技术声源的听觉经济</p>
+                                <p class="mingcheng4">(Shenzhen's Aural Economy of Portable Low-Tech Sound Sources)</p>
+                            </div>
+                            <div class="mengban"></div>
+                        </div>
+                    </a>
                     <!-- <a href="./works/livecoding.html">
                         <div class="mdb18">
                             <div class="mingcheng">
@@ -380,6 +392,7 @@
         const mdb18 = document.querySelector('.mdb18');
         const mdb19 = document.querySelector('.mdb19');
         const mdb20 = document.querySelector('.mdb20');
+        const mdb21 = document.querySelector('.mdb21');
         
         const img1 = new Image();
         const img2 = new Image();
@@ -401,6 +414,7 @@
         const img18 = new Image();
         const img19 = new Image();
         const img20 = new Image();
+        const img21 = new Image();
         img1.src = 'images/octoqin.png';
         img2.src = 'images/cosmusica.png';
         img3.src = 'images/ccmusic.jpg';
@@ -421,6 +435,7 @@
         img18.src = 'images/bg1.png';
         img19.src = 'images/digidi.JPG';
         img20.src = 'images/ago1.jpg';
+        img21.src = 'images/flowingsound.png';
         
         img1.onload = () => {
             mdb1.classList.add('loaded');
@@ -481,6 +496,9 @@
         };
         img20.onload = () => {
             mdb20.classList.add('loaded');
+        };
+        img21.onload = () => {
+            mdb21.classList.add('loaded');
         };
 
 
