@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Canvas</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Flowing Sound | Workshop</title>
+</head>
+<body>
+    <div id="canvas-container">
+        <div id="sidebar">
+            <h2>Flowing Sound</h2>
+            <p style="margin-bottom: 50px;">An interactive canvas about Flowing Sound Fieldwork</p>
+            <h3 style="margin-bottom: 20px;">在本次活动中，我们邀请你和我们一起来探索深圳城市街头流动的声音，从居民区小巷至美术馆的街头，从扬声器到广播音箱，一起感受来自深圳的活力，以不同的视角探索日常生活。</h3>
+            <h3 style="margin-bottom: 50px;">然后，我们会将收集到的材料进行现场组装，共同制作”流动的声音”手账。</h3>
+            <div id="image-title"></div>
+            <div id="image-bgc"></div>
+            <div id="player" class="player elements">
+                <span id="image-audio"></span>
+            </div>
+            <div id="image-describ" style="margin-bottom: 50px;"></div>
+            <img src="./archive/pictures/SSG-Logo-v1-black.svg" alt="" style="height: 60px; width: 200px;">
+            <img src="./archive/pictures/logo.png" alt="" style="height: 90px; width: 200px;">
+        </div>
+        <button id="toggle-sidebar">'<'</button>
+        
+        <button id="zoom-in" class="zoom-button">+</button>
+        <button id="zoom-out" class="zoom-button">-</button>
+        <button id="reset-canvas">O</button>
+    </div>
+    <script>
+        const sidebar = d3.select("#sidebar");
+        const toggleButton = d3.select("#toggle-sidebar");
+        let sidebarVisible = true;
+
+        toggleButton.on("click", () => {
+            sidebarVisible = !sidebarVisible;
+
+            // Toggle the visibility of the sidebar and button position
+            sidebar.classed("hidden", !sidebarVisible);
+            toggleButton.classed("hidden", !sidebarVisible);
+
+            toggleButton.text(sidebarVisible ? "'<'" : "'>'");
+        });
+
+        const width = window.innerWidth * 0.96;
+        const height = window.innerHeight * 0.94;
+
+        const svg = d3.select("#canvas-container")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        
+        svg.append("rect")
+        .attr("id", "canvas-border")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", height);
+
+        const zoom = d3.zoom()
+            .scaleExtent([1, 10])
+
+            //.on("zoom", (event) => {
+            //    g.attr("transform", event.transform);
+            //});
+
+            .on("zoom", (event) => {
+                const transform = event.transform;
+
+                const maxX = width * transform.k - width; // 最大 x 偏移量
+                const maxY = height * transform.k - height; // 最大 y 偏移量
+        
+                const limitedX = Math.min(0, Math.max(transform.x, -maxX));
+                const limitedY = Math.min(0, Math.max(transform.y, -maxY));
+        
+                g.attr("transform", `translate(${limitedX},${limitedY}) scale(${transform.k})`);
+            });
+            
+
+        svg.call(zoom);
+
+        const g = svg.append("g");
+
+        const images = [
+            {   src: "archive/scan/dmi.jpg", 
+                x: 500, 
+                y: 300, 
+                title: "Participant #1: Dmitrij", 
+                bgc: "archive/scan/dmi.jpg", 
+                audio: "archive/recording/Dmi/MONO-000.wav",
+                describ: "从居民区小巷至美术馆的街头，从扬声器到广播音箱，一起感受来自深圳的活力，以不同的视角探索日常生活。" 
+            },
+            {   src: "archive/scan/elliott2.jpg", 
+                x: 1200, 
+                y: 800, 
+                title: "Participant #2: Elliott", 
+                bgc: "archive/pictures/elliott.jpg", 
+                audio: "archive/recording/elliott/STE-000.wav",
+                describ: "从居民区小巷至美术馆的街头，从扬声器到广播音箱，一起感受来自深圳的活力，以不同的视角探索日常生活。" 
+            },
+            {   src: "archive/scan/guoguo.jpg", 
+                x: 850, 
+                y: 0, 
+                title: "Participant #3: guoguo", 
+                bgc: "archive/scan/guoguo.jpg", 
+                audio: "archive/recording/guoguo/STE-000.wav",
+                describ: "从居民区小巷至美术馆的街头，从扬声器到广播音箱，一起感受来自深圳的活力，以不同的视角探索日常生活。" 
+            },
+            {   src: "archive/scan/jelly1.jpg", 
+                x: 1000, 
+                y: 350, 
+                title: "Participant #4: Jelly", 
+                bgc: "archive/scan/jelly2.jpg", 
+                audio: "archive/recording/jelly/240530_001.WAV",
+                describ: "从居民区小巷至美术馆的街头，从扬声器到广播音箱，一起感受来自深圳的活力，以不同的视角探索日常生活。" 
+            },
+            {   src: "archive/scan/meisi1.jpg", 
+                x: 1900, 
+                y: 100, 
+                title: "Participant #5: Meisi", 
+                bgc: "archive/scan/meisi2.jpg", 
+                audio: "archive/recording/meisi/MONO-000.wav",
+                describ: "从居民区小巷至美术馆的街头，从扬声器到广播音箱，一起感受来自深圳的活力，以不同的视角探索日常生活。" 
+            },
+            {   src: "archive/scan/miaomiao1.jpg", 
+                x: 1500, 
+                y: 0, 
+                title: "Participant #6: 淼淼", 
+                bgc: "archive/scan/miaomiao2.jpg", 
+                audio: "archive/recording/miaomiao/090624-003.wav",
+                describ: "从居民区小巷至美术馆的街头，从扬声器到广播音箱，一起感受来自深圳的活力，以不同的视角探索日常生活。" 
+            },
+            {   src: "archive/scan/wangchizhong.jpg", 
+                x: 1400, 
+                y: 400, 
+                title: "Participant #7: 王驰中", 
+                bgc: "archive/pictures/wangchizhong.jpg", 
+                audio: "archive/recording/wangchizhong/241221_002.WAV",
+                describ: "从居民区小巷至美术馆的街头，从扬声器到广播音箱，一起感受来自深圳的活力，以不同的视角探索日常生活。" 
+            },
+            {   src: "archive/scan/xiaobai.jpg", 
+                x: 1750, 
+                y: 600, 
+                title: "Participant #8: 小白", 
+                bgc: "archive/scan/xiaobai.jpg", 
+                audio: "archive/recording/miaomiao/090624-004.wav",
+                describ: "从居民区小巷至美术馆的街头，从扬声器到广播音箱，一起感受来自深圳的活力，以不同的视角探索日常生活。" 
+            },
+            {   src: "archive/scan/yishang.jpg", 
+                x: 750, 
+                y: 750, 
+                title: "Participant #9: 以上", 
+                bgc: "archive/scan/yishang.jpg", 
+                audio: "archive/recording/yishang/STE-000.wav",
+                describ: "从居民区小巷至美术馆的街头，从扬声器到广播音箱，一起感受来自深圳的活力，以不同的视角探索日常生活。" 
+            },
+        ];
+
+        images.forEach((img, index) => {
+            g.append("image")
+                .attr("xlink:href", img.src)
+                .attr("x", img.x)
+                .attr("y", img.y)
+                .attr("width", 400)
+                .attr("height", 400)
+                .on("click", () => {
+                    const bounds = [[img.x, img.y], [img.x + 400, img.y + 400]];
+                    const dx = bounds[1][0] - bounds[0][0];
+                    const dy = bounds[1][1] - bounds[0][1];
+                    const x = (bounds[0][0] + bounds[1][0]) / 2;
+                    const y = (bounds[0][1] + bounds[1][1]) / 2;
+                    const scale = Math.max(1, Math.min(15, 0.9 / Math.max(dx / width, dy / height)));
+                    const translate = [width / 2 - scale * x, height / 2 - scale * y];
+
+                    svg.transition().duration(750).call(
+                        zoom.transform,
+                        d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)
+                    );
+
+                    // Automatically open the sidebar if it's hidden
+                    if (!sidebarVisible) {
+                        sidebarVisible = true;
+                        sidebar.classed("hidden", false);
+                        toggleButton.classed("hidden", false);
+                        toggleButton.text("'<'");
+                    }
+
+                    d3.select("#image-title").html(`<p>${img.title}</p>`);
+                    d3.select("#image-bgc").html(`<img src="${img.bgc}" style="width: 300px;">`);
+                    d3.select("#image-audio").html(`<button id="player-button"><img class="player-image play" src="archive/pictures/megaphone.png" style="animation-play-state: paused;"></button><audio loop class="audio" src="${img.audio}"></audio>`);
+                    d3.select("#image-describ").html(`<h3>${img.describ}</h3>`);
+
+                    const button = document.querySelector('#player-button');
+                    const audio = document.querySelector('.audio');
+                    const image = document.querySelector('.player-image');
+
+                    button.addEventListener('click', () =>{
+                      audio.volume = 1;
+                      player();
+                    });
+
+                    function player(){
+                        if (audio.paused) {
+                            audio.play();
+                            image.style.animationPlayState = 'running';
+                         } else {
+                            audio.pause();
+                            image.style.animationPlayState = 'paused';
+                         }
+                    };
+
+                    window.onload = () => {
+                      image.style.animationPlayState = 'paused';
+                    };
+                });
+        });
+
+        // Zoom control buttons
+        d3.select("#zoom-in").on("click", () => {
+            svg.transition().duration(500).call(zoom.scaleBy, 1.2);
+        });
+
+        d3.select("#zoom-out").on("click", () => {
+            svg.transition().duration(500).call(zoom.scaleBy, 0.8);
+        });
+
+        d3.select("#reset-canvas").on("click", () => {
+            svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+        });
+
+        
+    </script>
+</body>
+</html>

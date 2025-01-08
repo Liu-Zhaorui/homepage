@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'ark-pixel';
+    src: url('archive/font/ark-pixel-12px-monospaced-latin.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ark-pixel-cn';
+    src: url('archive/font/ark-pixel-12px-monospaced-zh_cn.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#sidebar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 97%;
+    background-color: #f0f0f0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+    z-index: 999;
+}
+
+#sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+#sidebar.hidden {
+    transform: translateX(-320px);
+}
+
+#sidebar h2 {
+    margin: 50px 0 20px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-family: 'ark-pixel';
+}
+
+#sidebar h3 {
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: left;
+    font-family: 'ark-pixel-cn';
+}
+
+#sidebar p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-family: 'ark-pixel';
+}
+
+#toggle-sidebar {
+    position: absolute;
+    top: calc(50% - 13px);
+    left: 339px;
+    padding: 5px 5px;
+    cursor: pointer;
+    /* background-color: #007BFF; */
+    background-color: #000;
+    color: white;
+    border: none;
+    font-weight: 700;
+    border-radius: 3px;
+    transition: left 0.5s ease-in-out;
+    z-index: 99;
+}
+
+#toggle-sidebar.hidden {
+    left: 19px;
+}
+
+#canvas-container {
+    position: absolute;
+    top: calc(3% - 4px);
+    left: calc(2% - 4px);
+    width: 96%;
+    height: 94%;
+    overflow: hidden;
+    border: dashed 4px #000;
+}
+
+svg image {
+    cursor: pointer;
+}
+
+.zoom-button {
+    padding: 0 13px;
+    position: absolute;
+    background-color: #000;
+    /* background-color: #007BFF; */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    font-family: 'ark-pixel';
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+#zoom-in {
+    bottom: 80px;
+    right: 30px;
+}
+
+#zoom-out {
+    bottom: 30px;
+    right: 30px;
+}
+
+#reset-canvas {
+    padding: 0 13px;
+    position: absolute;
+    background-color: #000;
+    /* background-color: #007BFF; */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    font-family: 'ark-pixel';
+    text-align: center;
+    line-height: 40px;
+    bottom: 130px;
+    right: 30px;
+    cursor: pointer;
+}
+
+#canvas-border {
+    fill: none;
+    /* stroke: #000;
+    stroke-dasharray: 5, 5;
+    stroke-width: 5; */
+}
+
+.player {
+    margin: 30px 0;
+}
+
+.player span {
+    display:inline-block;
+    height: 0;
+}
+
+.player button {
+    background: none;
+    border-radius: 50%;
+    padding: 0;
+    border: 0;
+}
+
+.player button img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.player button .play {
+    animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
