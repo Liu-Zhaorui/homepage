@@ -74,6 +74,22 @@
                     <h1>
                         <span>Exibitions</span>
                     </h1>
+                    <div class="mdb16">
+                        <div class="image-box">
+                            <div class="image16"></div>
+                        </div>
+                        <div class="mingcheng">
+                            <p class="mingcheng1">Flowing Sound 流动的声音</p>
+                            <p class="mingcheng2">2025日常艺术寻宝新春特别策划 Everyday Arts - Spring Festival Special</p>
+                            <p class="mingcheng3">Date: Jan 2025 - Feb 2025</p>
+                            <p class="mingcheng3">Place: Pingshan Art Museum, Shenzhen, China</p>
+                            <p class="mingcheng3">Materials: computers, speakers, megaphones, projector, LED screens</p>
+                            <p class="mingcheng3">Presented by Pingshan Art Museum & School of Design, Southern University of Science and Technology</p>
+                            <p class="mingcheng4">
+                                <a href="https://mp.weixin.qq.com/s/axXZ9SDbxnoOZuCJko7wUg" target="_blank">more>></a>
+                            </p>
+                        </div>
+                    </div>
                     <div class="mdb14">
                         <div class="image-box">
                             <div class="image14"></div>
@@ -378,6 +394,7 @@
         const mdb13 = document.querySelector('.image13');
         const mdb14 = document.querySelector('.image14');
         const mdb15 = document.querySelector('.image15');
+        const mdb16 = document.querySelector('.image16');
         
         const img1 = new Image();
         const img2 = new Image();
@@ -394,6 +411,7 @@
         const img13 = new Image();
         const img14 = new Image();
         const img15 = new Image();
+        const img16 = new Image();
         img1.src = 'images/exib1.jpg';
         img2.src = 'images/exib2.png';
         img3.src = 'images/exib3.png';
@@ -409,6 +427,7 @@
         img13.src = 'images/exib13.jpg';
         img14.src = 'images/exib14.png';
         img15.src = 'images/ago1.jpg';
+        img16.src = 'images/flowingsound2.png';
         
         img1.onload = () => {
             mdb1.classList.add('loaded');
@@ -454,6 +473,9 @@
         };
         img15.onload = () => {
             mdb15.classList.add('loaded');
+        };
+        img16.onload = () => {
+            mdb16.classList.add('loaded');
         };
 
         fullScreenBtn.onclick = () => {
