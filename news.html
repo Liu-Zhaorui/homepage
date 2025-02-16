@@ -154,6 +154,17 @@
                             <div class="mengban"></div>
                         </div>
                     </a>
+                    <a href="https://mp.weixin.qq.com/s/XQieIwnUr-Gau-RyJCjavg" target="_blank">
+                        <div class="mdb8">
+                            <div class="mingcheng">
+                                <p class="mingcheng1">2024 Wuhan Biennale Official Publication</p>
+                                <p class="mingcheng2">2024武汉双年展官方推文</p>
+                                <p class="mingcheng3">2024.10.5</p>
+                                <p class="mingcheng4">SUSTech School of Design -- 南方科技大学创新创意设计学院</p>
+                            </div>
+                            <div class="mengban"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="havefun">
@@ -195,7 +206,7 @@
                 </div>
             </div>
             <div class="foot-bottom">
-                Copyright © 2019-2024, Zhaorui Liu 刘兆蕤
+                Copyright © 2019-2025, Zhaorui Liu 刘兆蕤
             </div>
         </footer>
     </div>
@@ -210,6 +221,7 @@
         const mdb5 = document.querySelector('.mdb5');
         const mdb6 = document.querySelector('.mdb6');
         const mdb7 = document.querySelector('.mdb7');
+        const mdb8 = document.querySelector('.mdb8');
         
         const img1 = new Image();
         const img2 = new Image();
@@ -218,6 +230,7 @@
         const img5 = new Image();
         const img6 = new Image();
         const img7 = new Image();
+        const img8 = new Image();
         img1.src = 'images/news1.png';
         img2.src = 'images/news2.jpg';
         img3.src = 'images/news3.jpg';
@@ -225,6 +238,7 @@
         img5.src = 'images/news5.png';
         img6.src = 'images/news6.png';
         img7.src = 'images/news7.png';
+        img8.src = 'images/news8.png';
         
         img1.onload = () => {
             mdb1.classList.add('loaded');
@@ -246,6 +260,10 @@
         };
         img7.onload = () => {
             mdb7.classList.add('loaded');
+            console.log("change");
+        };
+        img8.onload = () => {
+            mdb8.classList.add('loaded');
             console.log("change");
         };
 
