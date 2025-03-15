@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-03-14T03:34:22.612Z",
+  "location": {
+    "latitude": 22.51483701637249,
+    "longitude": 113.94616613175155,
+    "accuracy": 14.267767225016948
+  },
+  "tags": [
+    "noisy",
+    "moving",
+    "traffic",
+    "vehicle and airplane noise"
+  ]
+}

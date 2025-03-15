@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-03-14T04:15:26.898Z",
+  "location": {
+    "latitude": 22.52586673216535,
+    "longitude": 113.93222029724843,
+    "accuracy": 60.441250087508756
+  },
+  "tags": [
+    "traffic",
+    "varying",
+    "controlled",
+    "moving",
+    "no-emotion"
+  ]
+}

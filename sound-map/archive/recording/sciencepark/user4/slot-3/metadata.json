@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-03-14T04:17:37.321Z",
+  "location": {
+    "latitude": 22.525824602800498,
+    "longitude": 113.93229979375788,
+    "accuracy": 93.66666666666667
+  },
+  "tags": [
+    "medium-loud",
+    "continuous",
+    "chaotic",
+    "blended",
+    "interesting"
+  ]
+}

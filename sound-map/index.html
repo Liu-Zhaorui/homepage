@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Canvas</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>The Big Voice | User Study</title>
+</head>
+<body>
+    <div id="canvas-container">
+        <div id="sidebar1">
+            <h2>The Big Voice</h2>
+            <div id="image-title"></div>
+            <div id="image-site"></div>
+            <div id="image-bgc"></div>
+            <div id="player" class="player elements">
+                <span id="image-audio"></span>
+            </div>
+            <div id="image-describ" style="margin-bottom: 50px;"></div>
+        </div>
+        <button id="toggle-sidebar1">'<'</button>
+        
+        <div id="sidebar2">
+            <h2>The Big Voice</h2>
+            <p style="margin-bottom: 30px;">User Study -- Exploring the Urban Soundscapes of Shenzhen</p>
+            <h3 style="margin-bottom: 20px;">The purpose of this study is to enhance the participation and user experience of urban sound research, and promote the development of mobile based urban sound collection and interaction technology. Through users' sound recordings and subjective descriptions in different urban environments, such as urban parks and technology parks, this study can provide profound insights into how urban soundscapes affect people's perception and experience.</h3>
+            <h3 style="margin-bottom: 30px;">In addition, the research results will provide new data and practical experience for fields such as human-computer interaction (HCI), urban sound research, environmental design, etc., which will help develop more humanized sound interaction systems in the future and provide scientific basis for urban planning and sound landscape optimization.</h3>
+            
+            <img src="./archive/pictures/logo-1.png" alt="" style="height: 75px; width: 175px;">
+            <img src="./archive/pictures/SSG-Logo-v1-black.svg" alt="" style="height: 40px; width: 150px; margin-bottom: 30px;">
+            <h4 style="margin-bottom: 20px;">Designed by Liu Zhaorui</h4>
+        </div>
+        <button id="toggle-sidebar2">'>'</button>
+        
+        <button id="reset-canvas">O</button>
+        <img src="./archive/font/park.png" id="park-icon">
+        <img src="./archive/font/science.png" id="science-icon">
+        <span id="park-zone">GREEN &nbsp; PARK</span>
+        <span id="science-zone">SCIENCE PARK</span>
+    </div>
+    <script>
+        const sidebar1 = d3.select("#sidebar1");
+        const sidebar2 = d3.select("#sidebar2");
+        const toggleButton1 = d3.select("#toggle-sidebar1");
+        const toggleButton2 = d3.select("#toggle-sidebar2");
+        let sidebar1Visible = true;
+        let sidebar2Visible = true;
+
+        toggleButton1.on("click", () => {
+            sidebar1Visible = !sidebar1Visible;
+            sidebar1.classed("hidden", !sidebar1Visible);
+            toggleButton1.classed("hidden", !sidebar1Visible);
+            toggleButton1.text(sidebar1Visible ? "'<'" : "'>'");
+        });
+        toggleButton2.on("click", () => {
+            sidebar2Visible = !sidebar2Visible;
+            sidebar2.classed("hidden", !sidebar2Visible);
+            toggleButton2.classed("hidden", !sidebar2Visible);
+            toggleButton2.text(sidebar2Visible ? "'>'" : "'<'");
+        });
+
+        const width = window.innerWidth * 0.96;
+        const height = window.innerHeight * 0.94;
+
+        const svg = d3.select("#canvas-container")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        
+        svg.append("rect")
+            .attr("id", "canvas-border")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("width", width)
+            .attr("height", height);
+
+        svg.append("line")
+            .attr("x1", width / 2)
+            .attr("y1", 0)
+            .attr("x2", width / 2)
+            .attr("y2", height)
+            .attr("stroke", "black")
+            .attr("stroke-dasharray", "5,5")
+            .attr("stroke-width", 4);
+
+        const g = svg.append("g");
+
+        d3.csv("imagedata.csv").then(images => {
+            const maxX = 1638;
+            const maxY = 775;
+            const scaleX = d3.scaleLinear().domain([0, maxX]).range([0, width]);
+            const scaleY = d3.scaleLinear().domain([0, maxY]).range([0, height]);
+
+            images.forEach((img, index) => {
+                const button = document.createElement("button");
+                button.style.position = "absolute";
+                button.style.left = `${scaleX(img.x)}px`;
+                button.style.top = `${scaleY(img.y)}px`;
+                button.style.width = "60px";
+                button.style.height = "60px";
+                button.style.backgroundImage = `url(${img.src})`;
+                button.style.opacity = 0.5;
+
+                button.draggable = true;
+                button.addEventListener("dragstart", (event) => {
+                    event.dataTransfer.setData("text/plain", "");
+                    event.dataTransfer.setDragImage(new Image(), 0, 0);
+                    button.style.opacity = 0.5;
+                });
+
+                button.addEventListener("drag", (event) => {
+                    event.preventDefault();
+                    if (event.pageX !== 0 && event.pageY !== 0) {
+                        button.style.left = `${event.pageX - 60}px`;
+                        button.style.top = `${event.pageY - 60}px`;
+                        let slider = document.querySelector(`input[data-src='${img.audio}']`);
+                        if (slider) {
+                            slider.style.left = `${event.pageX - 60}px`;
+                            slider.style.top = `${event.pageY}px`;
+                        }
+                    }
+                });
+
+                button.addEventListener("click", () => {
+                    if (!sidebar1Visible) {
+                        sidebar1Visible = false;
+                        sidebar1.classed("hidden", true);
+                        toggleButton1.classed("hidden", true);
+                        toggleButton1.text("'<'");
+                    }
+                    if (!sidebar2Visible) {
+                        sidebar2Visible = false;
+                        sidebar2.classed("hidden", true);
+                        toggleButton2.classed("hidden", true);
+                        toggleButton2.text("'>'");
+                    }
+                    d3.select("#image-title").html(`<p>${img.title}</p>`);
+                    d3.select("#image-site").html(`<p>${img.site}</p>`);
+                    d3.select("#image-bgc").html(`<img src="${img.bgc}" style="width: 200px;">`);
+                    d3.select("#image-describ").html(`<p>${img.describ}<p>`);
+                    let existingAudio = document.querySelector(`audio[data-src='${img.audio}']`);
+                    let volumeSlider = document.querySelector(`input[data-src='${img.audio}']`);
+                    let panLabel = document.querySelector(`label[data-pan-src='${img.audio}']`);
+                    let leftLabel = document.querySelector(`label[data-left-src='${img.audio}']`);
+                    let panSlider = document.querySelector(`input[data-pan-src='${img.audio}']`);
+                    let rightLabel = document.querySelector(`label[data-right-src='${img.audio}']`);
+                    let lowpassLabel = document.querySelector(`label[data-low-src='${img.audio}']`);
+                    let lowpassSlider = document.querySelector(`input[data-lowpass-src='${img.audio}']`);
+                    let highpassLabel = document.querySelector(`label[data-high-src='${img.audio}']`);
+                    let highpassSlider = document.querySelector(`input[data-highpass-src='${img.audio}']`);
+                    
+                    document.querySelectorAll("label[data-pan-src]").forEach(label => {
+                        document.getElementById("sidebar1").removeChild(label);
+                    });
+                    document.querySelectorAll("label[data-left-src]").forEach(label => {
+                        document.getElementById("sidebar1").removeChild(label);
+                    });
+                    document.querySelectorAll("input[data-pan-src]").forEach(slider => {
+                        document.getElementById("sidebar1").removeChild(slider);
+                    });
+                    document.querySelectorAll("label[data-right-src]").forEach(label => {
+                        document.getElementById("sidebar1").removeChild(label);
+                    });
+                    document.querySelectorAll("label[data-low-src]").forEach(label => {
+                        document.getElementById("sidebar1").removeChild(label);
+                    });
+                    document.querySelectorAll("input[data-lowpass-src]").forEach(slider => {
+                        document.getElementById("sidebar1").removeChild(slider);
+                    });
+                    document.querySelectorAll("label[data-high-src]").forEach(label => {
+                        document.getElementById("sidebar1").removeChild(label);
+                    });
+                    document.querySelectorAll("input[data-highpass-src]").forEach(slider => {
+                        document.getElementById("sidebar1").removeChild(slider);
+                    });
+
+                    if (!existingAudio) {
+                        let audioElement = document.createElement("audio");
+                        audioElement.src = img.audio;
+                        audioElement.setAttribute("data-src", img.audio);
+                        audioElement.loop = true;
+                        audioElement.volume = 1;
+                        document.body.appendChild(audioElement);
+                        audioElement.play();
+                        button.style.animation = "pulse 2s infinite";
+
+                        let slider = document.createElement("input");
+                        slider.type = "range";
+                        slider.min = "0";
+                        slider.max = "1";
+                        slider.step = "0.01";
+                        slider.value = "1";
+                        slider.setAttribute("data-src", img.audio);
+                        slider.style.position = "absolute";
+                        slider.style.left = `${parseInt(button.style.left)}px`;
+                        slider.style.top = `${parseInt(button.style.top) + 60}px`;
+                        slider.style.width = "60px";
+                        document.getElementById("canvas-container").appendChild(slider);
+
+                        slider.addEventListener("input", (event) => {
+                            audioElement.volume = event.target.value;
+                        });
+
+                        let panLabel = document.createElement("label");
+                        panLabel.innerText = "PAN";
+                        panLabel.style.fontFamily = "ark-pixel";
+                        panLabel.style.fontSize = "1.25rem";
+                        panLabel.style.display = "block";
+                        panLabel.style.marginBottom = "10px";
+                        panLabel.setAttribute("data-pan-src", img.audio);
+                        document.getElementById("sidebar1").appendChild(panLabel);
+
+                        let leftLabel = document.createElement("label");
+                        leftLabel.innerText = "left";
+                        leftLabel.style.fontFamily = "ark-pixel";
+                        leftLabel.style.fontSize = "0.9rem";
+                        leftLabel.setAttribute("data-left-src", img.audio);
+                        document.getElementById("sidebar1").appendChild(leftLabel);
+
+                        let panSlider = document.createElement("input");
+                        panSlider.type = "range";
+                        panSlider.min = "-1";
+                        panSlider.max = "1";
+                        panSlider.step = "0.01";
+                        panSlider.value = "0";
+                        panSlider.setAttribute("data-pan-src", img.audio);
+                        panSlider.style.width = "110px";
+                        panSlider.style.height = "5px";
+                        panSlider.style.margin = "10px";
+                        document.getElementById("sidebar1").appendChild(panSlider);
+
+                        let rightLabel = document.createElement("label");
+                        rightLabel.innerText = "right";
+                        rightLabel.style.fontFamily = "ark-pixel";
+                        rightLabel.style.fontSize = "0.9rem";
+                        rightLabel.setAttribute("data-right-src", img.audio);
+                        document.getElementById("sidebar1").appendChild(rightLabel);
+
+                        let lowpassLabel = document.createElement("label");
+                        lowpassLabel.innerText = "LOWPASS FILTER";
+                        lowpassLabel.style.fontFamily = "ark-pixel";
+                        lowpassLabel.style.fontSize = "1.25rem";
+                        lowpassLabel.style.display = "block";
+                        lowpassLabel.style.margin = "10px 0";
+                        lowpassLabel.setAttribute("data-low-src", img.audio);
+                        document.getElementById("sidebar1").appendChild(lowpassLabel);
+
+                        let lowpassSlider = document.createElement("input");
+                        lowpassSlider.type = "range";
+                        lowpassSlider.min = "1";
+                        lowpassSlider.max = "10000";
+                        lowpassSlider.step = "1";
+                        lowpassSlider.value = "8000";
+                        lowpassSlider.setAttribute("data-lowpass-src", img.audio);
+                        lowpassSlider.style.width = "160px";
+                        lowpassSlider.style.height = "5px";
+                        lowpassSlider.style.margin = "10px 0";
+                        document.getElementById("sidebar1").appendChild(lowpassSlider);
+
+                        let highpassLabel = document.createElement("label");
+                        highpassLabel.innerText = "HIGHPASS FILTER";
+                        highpassLabel.style.fontFamily = "ark-pixel";
+                        highpassLabel.style.fontSize = "1.25rem";
+                        highpassLabel.style.display = "block";
+                        highpassLabel.style.margin = "10px 0";
+                        highpassLabel.setAttribute("data-high-src", img.audio);
+                        document.getElementById("sidebar1").appendChild(highpassLabel);
+
+                        let highpassSlider = document.createElement("input");
+                        highpassSlider.type = "range";
+                        highpassSlider.min = "1";
+                        highpassSlider.max = "5000";
+                        highpassSlider.step = "1";
+                        highpassSlider.value = "1000";
+                        highpassSlider.setAttribute("data-highpass-src", img.audio);
+                        highpassSlider.style.width = "160px";
+                        highpassSlider.style.height = "5px";
+                        highpassSlider.style.margin = "10px 0";
+                        document.getElementById("sidebar1").appendChild(highpassSlider);
+
+                        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                        const track = audioContext.createMediaElementSource(audioElement);
+                        const panner = new StereoPannerNode(audioContext, { pan: 0 });
+                        const lowpassFilter = new BiquadFilterNode(audioContext, { type: 'lowpass', frequency: 5000 });
+                        const highpassFilter = new BiquadFilterNode(audioContext, { type: 'highpass', frequency: 500 });
+                        track.connect(panner).connect(lowpassFilter).connect(highpassFilter).connect(audioContext.destination);
+
+                        panSlider.addEventListener("input", (event) => {
+                            panner.pan.value = event.target.value;
+                        });
+
+                        lowpassSlider.addEventListener("input", (event) => {
+                            lowpassFilter.frequency.value = event.target.value;
+                        });
+
+                        highpassSlider.addEventListener("input", (event) => {
+                            highpassFilter.frequency.value = event.target.value;
+                        });
+
+                        // 保存panner和filter节点到audioElement
+                        audioElement.panner = panner;
+                        audioElement.lowpassFilter = lowpassFilter;
+                        audioElement.highpassFilter = highpassFilter;
+                    } else {
+                        if (existingAudio.paused) {
+                            existingAudio.currentTime = 0;
+                            existingAudio.play();
+                            button.style.animation = "pulse 2s infinite";
+
+                            // 显示音量控制slider
+                            if (volumeSlider) {
+                                volumeSlider.style.display = "block";
+                            } else {
+                                let slider = document.createElement("input");
+                                slider.type = "range";
+                                slider.min = "0";
+                                slider.max = "1";
+                                slider.step = "0.01";
+                                slider.value = "1";
+                                slider.setAttribute("data-src", img.audio);
+                                slider.style.position = "absolute";
+                                slider.style.left = `${parseInt(button.style.left)}px`;
+                                slider.style.top = `${parseInt(button.style.top) + 70}px`;
+                                slider.style.width = "60px";
+                                document.getElementById("canvas-container").appendChild(slider);
+
+                                slider.addEventListener("input", (event) => {
+                                    existingAudio.volume = event.target.value;
+                                });
+                            }
+
+                            // 显示左右声像控制slider
+                            if (panSlider) {
+                                panSlider.style.display = "block";
+                                panLabel.style.display = "block";
+                                leftLabel.style.display = "block";
+                                rightLabel.style.display = "block";
+                            } else {
+                                let panLabel = document.createElement("label");
+                                panLabel.innerText = "PAN";
+                                panLabel.style.fontFamily = "ark-pixel";
+                                panLabel.style.fontSize = "1.25rem";
+                                panLabel.style.display = "block";
+                                panLabel.style.marginBottom = "10px";
+                                panLabel.setAttribute("data-pan-src", img.audio);
+                                document.getElementById("sidebar1").appendChild(panLabel);
+
+                                let leftLabel = document.createElement("label");
+                                leftLabel.innerText = "left";
+                                leftLabel.style.fontFamily = "ark-pixel";
+                                leftLabel.style.fontSize = "0.9rem";
+                                leftLabel.setAttribute("data-left-src", img.audio);
+                                document.getElementById("sidebar1").appendChild(leftLabel);
+
+                                let panSlider = document.createElement("input");
+                                panSlider.type = "range";
+                                panSlider.min = "-1";
+                                panSlider.max = "1";
+                                panSlider.step = "0.01";
+                                panSlider.value = existingAudio.panner.pan.value; // 保持第一次调整的位置
+                                panSlider.setAttribute("data-pan-src", img.audio);
+                                panSlider.style.width = "110px";
+                                panSlider.style.height = "5px";
+                                panSlider.style.margin = "10px";
+                                document.getElementById("sidebar1").appendChild(panSlider);
+
+                                let rightLabel = document.createElement("label");
+                                rightLabel.innerText = "right";
+                                rightLabel.style.fontFamily = "ark-pixel";
+                                rightLabel.style.fontSize = "0.9rem";
+                                rightLabel.setAttribute("data-right-src", img.audio);
+                                document.getElementById("sidebar1").appendChild(rightLabel);
+
+                                panSlider.addEventListener("input", (event) => {
+                                    existingAudio.panner.pan.value = event.target.value;
+                                });
+                            }
+
+                            // 显示lowpass和highpass filter slider
+                            if (lowpassSlider) {
+                                lowpassSlider.style.display = "block";
+                            } else {
+                                let lowpassLabel = document.createElement("label");
+                                lowpassLabel.innerText = "LOWPASS FILTER";
+                                lowpassLabel.style.fontFamily = "ark-pixel";
+                                lowpassLabel.style.fontSize = "1.25rem";
+                                lowpassLabel.style.display = "block";
+                                lowpassLabel.style.margin = "10px 0";
+                                lowpassLabel.setAttribute("data-low-src", img.audio);
+                                document.getElementById("sidebar1").appendChild(lowpassLabel);
+
+                                let lowpassSlider = document.createElement("input");
+                                lowpassSlider.type = "range";
+                                lowpassSlider.min = "1";
+                                lowpassSlider.max = "10000";
+                                lowpassSlider.step = "1";
+                                lowpassSlider.value = existingAudio.lowpassFilter.frequency.value;
+                                lowpassSlider.setAttribute("data-lowpass-src", img.audio);
+                                lowpassSlider.style.width = "160px";
+                                lowpassSlider.style.height = "5px";
+                                lowpassSlider.style.margin = "10px 0";
+                                document.getElementById("sidebar1").appendChild(lowpassSlider);
+
+                                lowpassSlider.addEventListener("input", (event) => {
+                                    existingAudio.lowpassFilter.frequency.value = event.target.value;
+                                });
+                            }
+
+                            if (highpassSlider) {
+                                highpassSlider.style.display = "block";
+                            } else {
+                                let highpassLabel = document.createElement("label");
+                                highpassLabel.innerText = "HIGHPASS FILTER";
+                                highpassLabel.style.fontFamily = "ark-pixel";
+                                highpassLabel.style.fontSize = "1.25rem";
+                                highpassLabel.style.display = "block";
+                                highpassLabel.style.margin = "10px 0";
+                                highpassLabel.setAttribute("data-high-src", img.audio);
+                                document.getElementById("sidebar1").appendChild(highpassLabel);
+
+                                let highpassSlider = document.createElement("input");
+                                highpassSlider.type = "range";
+                                highpassSlider.min = "1";
+                                highpassSlider.max = "5000";
+                                highpassSlider.step = "1";
+                                highpassSlider.value = existingAudio.highpassFilter.frequency.value;
+                                highpassSlider.setAttribute("data-highpass-src", img.audio);
+                                highpassSlider.style.width = "160px";
+                                highpassSlider.style.height = "5px";
+                                highpassSlider.style.margin = "10px 0";
+                                document.getElementById("sidebar1").appendChild(highpassSlider);
+
+                                highpassSlider.addEventListener("input", (event) => {
+                                    existingAudio.highpassFilter.frequency.value = event.target.value;
+                                });
+                            }
+                        } else {
+                            existingAudio.pause();
+                            button.style.animation = "";
+                            button.style.opacity = 0.5;
+                            if (volumeSlider) {
+                                volumeSlider.style.display = "none";
+                            }
+                            if (panSlider) {
+                                panLabel.style.display = "none";
+                                leftLabel.style.display = "none";
+                                panSlider.style.display = "none";
+                                rightLabel.style.display = "none";
+                            }
+                            if (lowpassSlider) {
+                                lowpassSlider.style.display = "none";
+                            }
+                            if (highpassSlider) {
+                                highpassSlider.style.display = "none";
+                            }
+                        }
+                    }
+                });
+
+                document.getElementById("canvas-container").appendChild(button);
+            });
+        });
+
+        d3.select("#reset-canvas").on("click", () => {
+            document.querySelectorAll("audio").forEach(audio => {
+                audio.pause();
+                document.body.removeChild(audio);
+            });
+            document.querySelectorAll("button").forEach(button => {
+                button.style.animation = "";
+            });
+            document.querySelectorAll("input[type='range']").forEach(slider => {
+                if (slider.parentElement.id === "canvas-container") {
+                    document.getElementById("canvas-container").removeChild(slider);
+                } else if (slider.parentElement.id === "sidebar1") {
+                    document.getElementById("sidebar1").removeChild(slider);
+                }
+            });
+            document.querySelectorAll("label").forEach(label => {
+                if (label.parentElement.id === "sidebar1") {
+                    document.getElementById("sidebar1").removeChild(label);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

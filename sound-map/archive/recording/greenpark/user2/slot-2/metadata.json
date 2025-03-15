@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-03-14T03:32:56.066Z",
+  "location": {
+    "latitude": 22.516695658138122,
+    "longitude": 113.94320339634339,
+    "accuracy": 78.44584896257415
+  },
+  "tags": [
+    "voice",
+    "continuous",
+    "clear",
+    "isolated",
+    "no-emotion"
+  ]
+}
