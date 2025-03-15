@@ -74,6 +74,18 @@
                     <h1>
                         <span>Works</span>
                     </h1>
+                    <!-- <a href="./works/vrconcert.html">
+                        <div class="mdb22">
+                            <div class="mingcheng">
+                                <p class="mingcheng1">Virtual Concert Hall</p>
+                                <p class="mingcheng2">虚拟在线音乐会</p>
+                                <p class="mingcheng3">2025.3--present</p>
+                                <p class="mingcheng4">虚拟在线音乐会</p>
+                                <p class="mingcheng4">(Virtual Concert Hall)</p>
+                            </div>
+                            <div class="mengban"></div>
+                        </div>
+                    </a> -->
                     <a href="./works/flowingsound.html">
                         <div class="mdb21">
                             <div class="mingcheng">
@@ -115,7 +127,7 @@
                             <div class="mingcheng">
                                 <p class="mingcheng1">Urban Sound Diary</p>
                                 <p class="mingcheng2">城市声音日记</p>
-                                <p class="mingcheng3">2024.7--2024.9</p>
+                                <p class="mingcheng3">2024.7--present</p>
                                 <p class="mingcheng4">基于浏览器的交互式城市声音探索工具</p>
                                 <p class="mingcheng4">(Browser-based Interactive Urban Sound Explorer App)</p>
                             </div>
@@ -127,7 +139,7 @@
                             <div class="mingcheng">
                                 <p class="mingcheng1">Inside & Outside</p>
                                 <p class="mingcheng2">电动汽车声音研究</p>
-                                <p class="mingcheng3">2024.7--2025.2</p>
+                                <p class="mingcheng3">2024.7--present</p>
                                 <p class="mingcheng4">声音交互与声音风险感知——以深圳市为例</p>
                                 <p class="mingcheng4">(Sonic Interaction and Risk Perception Through Sound in the Example of Shenzhen City)</p>
                             </div>
@@ -393,6 +405,7 @@
         const mdb19 = document.querySelector('.mdb19');
         const mdb20 = document.querySelector('.mdb20');
         const mdb21 = document.querySelector('.mdb21');
+        const mdb22 = document.querySelector('.mdb22');
         
         const img1 = new Image();
         const img2 = new Image();
@@ -415,6 +428,7 @@
         const img19 = new Image();
         const img20 = new Image();
         const img21 = new Image();
+        const img22 = new Image();
         img1.src = 'images/octoqin.png';
         img2.src = 'images/cosmusica.png';
         img3.src = 'images/ccmusic.jpg';
@@ -436,6 +450,7 @@
         img19.src = 'images/digidi.JPG';
         img20.src = 'images/ago1.jpg';
         img21.src = 'images/flowingsound.png';
+        img22.src = 'images/vch.png';
         
         img1.onload = () => {
             mdb1.classList.add('loaded');
@@ -500,7 +515,9 @@
         img21.onload = () => {
             mdb21.classList.add('loaded');
         };
-
+        img22.onload = () => {
+            mdb22.classList.add('loaded');
+        };
 
         fullScreenBtn.onclick = () => {
           html.requestFullscreen()
