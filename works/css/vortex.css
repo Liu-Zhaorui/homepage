@@ -158,8 +158,8 @@ article {
 
 .body-container .body-overview .boch .image-box .image-0 {
     height: 100%;
-    width: 60%;
-    margin: 0 0 0 calc(20%);
+    width: 80%;
+    margin: 0 0 0 calc(10%);
     background-image: url(../materials/logo5.svg);
     background-repeat: no-repeat;
     background-size: contain;

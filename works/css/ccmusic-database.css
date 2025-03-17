@@ -190,8 +190,7 @@ article {
 
 .body-container .body-overview .boch .image-box .image-0 {
     height: 100%;
-    width: 60%;
-    margin: 0 0 0 calc(20%);
+    width: 100%;
     background-image: url(../materials/logo3.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -200,8 +199,7 @@ article {
 
 .body-container .body-overview .boch .image-box .image-00 {
     height: 100%;
-    width: 60%;
-    margin: 0 0 0 calc(20%);
+    width: 100%;
     background-image: url(../materials/logo4.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -210,8 +208,7 @@ article {
 
 .body-container .body-overview .boch .image-box .image-000 {
     height: 100%;
-    width: 60%;
-    margin: 0 0 0 calc(20%);
+    width: 100%;
     background-image: url(../materials/logo1.png);
     background-repeat: no-repeat;
     background-size: contain;
