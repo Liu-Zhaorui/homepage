@@ -980,7 +980,7 @@ article {
     flex-flow: row wrap;
     height: 100%;
     width: 100%;
-    background-image: url(../images/flowingsound-low.png);
+    background-image: url(../images/xrconcert-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -991,7 +991,7 @@ article {
 
 .body-container .body-overview .mdb22.loaded {
     transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/vch.png);
+    background-image: url(../images/xrconcert.png);
     filter: blur(0);
 }
 
