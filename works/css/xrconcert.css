@@ -169,7 +169,7 @@ article {
 .body-container .body-overview .boch .image-box .image-1 {
     height: 100%;
     width: 100%;
-    background-image: url(../materials/urban5.png);
+    background-image: url(../materials/xrconcert.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -214,7 +214,7 @@ article {
 .body-container .body-overview .boch .image-box .image-6 {
     height: 100%;
     width: 100%;
-    background-image: url(../materials/urban8.png);
+    background-image: url(../materials/xrconcert7.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -222,9 +222,8 @@ article {
 
 .body-container .body-overview .boch .image-box .image-7 {
     height: 100%;
-    width: 60%;
-    margin: 0 0 0 calc(20%);
-    background-image: url(../materials/logo14.jpg);
+    width: 100%;
+    background-image: url(../materials/xrconcert7.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -232,9 +231,8 @@ article {
 
 .body-container .body-overview .boch .image-box .image-8 {
     height: 100%;
-    width: 60%;
-    margin: 0 0 0 calc(20%);
-    background-image: url(../materials/urban9.JPG);
+    width: 100%;
+    background-image: url(../materials/xrconcert8.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

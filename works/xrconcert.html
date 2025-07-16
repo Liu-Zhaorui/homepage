@@ -72,10 +72,14 @@
             <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 </ol>
                 <div class="carousel-inner" style="height:100%;">
                     <div class="carousel-item active" data-interval="3000">
                         <img src="materials/xrconcert1.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-interval="3000">
+                        <img src="materials/xrconcert2.jpg" class="d-block w-100">
                     </div>
                 </div>
             </div>
@@ -138,74 +142,8 @@
                         </div>
                     </div>
                     <div class="boch">
-                        <div class="image-box">
+                        <div class="image-box" style="height: 600px;">
                             <div class="image-1"></div>
-                        </div>
-                    </div>
-                    <div class="boch" style="margin-top: 50px;">
-                        <div class="mingcheng" style="width: 55%;">
-                            <p class="mingcheng1">Sound Recorder</p>
-                            <p class="mingcheng2">
-                                The recorder allows users to record, play back, and upload audio for analysis. When the record button is pressed, it turns orange and initiates audio recording via the MediaRecorder API, visualizing the waveform on a canvas. The visual utilizes 'getUserMedia' to access the microphone, initializes an 'AudioContext' and an 'AnalyserNode' for real-time processing, and draws the waveform with the canvas 2D context. Users can manage recordings through various buttons, with recorded audio saved as a Blob for playback and uploading. A timer is displayed during recording, and upon completion, a recording list appears showing the recording time, options to delete or upload recordings, and playback functionality. Once users upload the recording, the segmentation of the audio will begin. After uploading, audio segmentation begins, and once the user completes recording and playback, the analyzer button integrates the segmented audio using t-SNE and UMAP algorithms, directing the user to the sound browser page.
-                            </p>
-                        </div>
-                        <div class="image-box" style="width: 45%; height: 500px;">
-                            <div class="image-3"></div>
-                        </div>
-                    </div>
-                    <div class="boch" style="margin-top: 50px;">
-                        <div class="image-box" style="width: 25%; height: 500px; margin-top: 50px;">
-                            <div class="image-4"></div>
-                        </div>
-                        <div class="mingcheng" style="width: 75%;">
-                            <p class="mingcheng1">Data visualization</p>
-                            <p class="mingcheng2">
-                                The app provides the user with an intuitive visual interface of the crowd-sourced database to navigate the segmented sound units in a 2D space, to experiment with post-effects on the selected sounds, and to combine samples into artistic-creative digital soundscape compositions that act as their urban sound diary. The app is aimed at making ordinary users aware of their sonic surroundings and of their city; and it assists them in understanding their sonic environment as an essential part of their experience in urban space. The app also explores an experimental tool for soundscape design leveraging interactive data visualization and sonic creation.
-                            </p>
-                            <p class="mingcheng2">
-                                Concatenative sound synthesis (CSS) is a technique for synthesizing a target sound by assembling matching samples from a sound database. It has inspired the design of data-driven music systems and interfaces for synthesis, composition, performance, and other experimental purposes. The conventional workflow of a CSS system involves 1. temporal segmentation: segmenting source sounds from the database into shorter sound units; 2. feature extraction: extracting descriptors of the units; 3. unit selection: selecting sound units to assemble a target phrase according to a proximity measure in the descriptor space. The feature extraction phase results in very long feature vectors for all sound units, and a corresponding highdimensional feature space.
-                            </p>
-                            <p class="mingcheng2">
-                                From here, CSS creates an explorable space of the sound data-slide-to, which can be mapped into a 2-dimensional space by applying dimensionality reduction methods such as Principal Component Analysis (PCA), Self-Organizing Maps (SOM), t-distributed Stochastic Neighbor Embedding (t-SNE), and Uniform Manifold Approximation and Projection (UMAP). By connecting an interactive scatterplot visualization of the 2-dimensional space, the user is provided with an intuitive visual interface to explore the sound database, allowing them to navigate the scatterplot and select sound units to play and listen to.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="boch" style="margin-top: 50px;">
-                        <div class="mingcheng" style="width: 55%;">
-                            <p class="mingcheng1">Interaction Interface</p>
-                            <p class="mingcheng2">
-                                The primary objective of Interaction Interface is to create an interactive scatterplot visualization that integrates dynamic audio playback, enabling users to explore spatial data points through auditory interaction while engaging with corresponding sound files. To further enhance user engagement and playability, the ability to switch between UMAP and t-SNE was implemented. Users can toggle between the two algorithms in the top right corner to compare different visualizations and playback experiences directly. The scatterplot, rendered within a dynamically sized SVG using D3.js, allows users to zoom and pan across a coordinate plane where each data point represents a sound file.
-                            </p>
-                            <p class="mingcheng2">
-                                The key feature of the interface is the integration of the Web Audio API for dynamic audio playback. Upon user interaction with the scatterplot (e.g., clicking or hovering over a point), and the corresponding audio file associated with that data point is played back. This is achieved by preloading audio elements tied to each data point, which are connected to the audio processing graph consisting of nodes such as GainNode, FilterNode, volumnNode and ConvolverNode. These nodes are responsible for real-time manipulation of sound parameters such as reverb and the low-pass filter's cutoff frequency.
-                            </p>
-                        </div>
-                        <div class="image-box" style="width: 45%; height: 500px; margin: 100px 0;">
-                            <div class="image-5"></div>
-                        </div>
-                    </div>
-                    <div class="boch" style="margin-top: 0;">
-                        <div class="mingcheng" style="width: 100%;">
-                            <p class="mingcheng2">
-                                The "selection circle" mechanism is implemented to enable group interactions. When the user clicks on a location within the scatterplot, a circle is dynamically generated at the position of interaction, identifying and clustering nearby data points. The circle identifies points within its area by calculating the distance between the click location and each point's coordinates. Audio playback is triggered sequentially for the points within the selection, using a randomized order to enhance the auditory experience linked to the spatial arrangement of the data. The d3.shuffle function is used to randomize the order, and each audio file is played with custom start and end times, using setTimeout to pause the audio after its duration is completed.
-                            </p>
-                            <p class="mingcheng2">
-                                Consequently, audio preloading and data binding are handled via D3's csv() function, which loads the data points from the CSV file. For each data point, an 'audio' HTML element is created, and its source is linked to the user's recording file corresponding to that point's metadata. The audio files are connected to the Web Audio API's audio graph, ensuring that they respond to user interactions on the scatterplot. The function scatterplot-visualize binds the data to visual elements (the dots) and assigns event listeners to trigger audio playback upon interaction.
-                            </p>
-                            <p class="mingcheng2">
-                                To interact with the visualization, tools for control over audio effects are further enhanced through sliders, allowing users to adjust reverb, volume, and filter cutoff frequency for the low-pass filter in real time. This functionality enables users to manipulate the auditory composition made out of the data, creating a dynamic, user-driven exploration of sound, with auditory interaction, within a visualized space. Simultaneously, the eraser icon enables users to delete selected sound units (dots on the visualization) in the eraser mode, increasing the user's agency and the app's playability, while the crowd icon allows toggling the scatterplots to display either all users' sounds or only the individual user's own recordings.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="boch" style="margin-top: 20px;">
-                        <div class="mingcheng">
-                            <p class="mingcheng1">Sound Map (New Version 2025.3.14)</p>
-                            <p class="mingcheng2">The purpose of this study is to enhance the participation and user experience of urban sound research, and promote the development of mobile based urban sound collection and interaction technology. Through users' sound recordings and subjective descriptions in different urban environments, such as urban parks and technology parks, this study can provide profound insights into how urban soundscapes affect people's perception and experience.</p>
-                        </div>
-                    </div>
-                    <div class="boch">
-                        <div class="image-box" style="height: 800px;">
-                            <div class="image-2"></div>
                         </div>
                     </div>
                     <div class="boch" style="margin-top: 20px;">
@@ -217,13 +155,13 @@
                         </div>
                     </div>
                     <div class="boch">
-                        <div class="image-box" style="height: 800px;">
-                            <div class="image-6" style="height: 800px;"></div>
+                        <div class="image-box" style="height: 600px;">
+                            <div class="image-6" style="height: 600px;"></div>
                         </div>
                     </div>
                     <div class="boch">
-                        <div class="image-box" style="height: 800px;">
-                            <div class="image-8" style="height: 800px;"></div>
+                        <div class="image-box" style="height: 600px;">
+                            <div class="image-8" style="height: 600px;"></div>
                         </div>
                     </div>
                     <div class="boch" style="margin-top: 80px;">
