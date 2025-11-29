@@ -77,13 +77,25 @@
                     <h1>
                         <span>Courses</span>
                     </h1>
+                    <a href="./courses/organology.html">
+                        <div class="mdb3">
+                            <div class="mingcheng">
+                                <p class="mingcheng1">An Introduction to Organology</p>
+                                <p class="mingcheng2">乐器学概论</p>
+                                <p class="mingcheng3">2026.9-2027.1</p>
+                                <p class="mingcheng4">Specialized Basic Courses</p>
+                                <p class="mingcheng4">(An Introduction to Organology)</p>
+                            </div>
+                            <div class="mengban"></div>
+                        </div>
+                    </a>
                     <a href="./courses/handicraft.html">
                         <div class="mdb2">
                             <div class="mingcheng">
                                 <p class="mingcheng1">Handicraft Practice</p>
                                 <p class="mingcheng2">手工工艺实践</p>
                                 <p class="mingcheng3">2025.9-2026.7</p>
-                                <p class="mingcheng4">Major Elective Courses</p>
+                                <p class="mingcheng4">Specialized Elective Course</p>
                                 <p class="mingcheng4">(Handicraft Practice)</p>
                             </div>
                             <div class="mengban"></div>
@@ -95,7 +107,7 @@
                                 <p class="mingcheng1">Product Design & Development</p>
                                 <p class="mingcheng2">产品设计与研发</p>
                                 <p class="mingcheng3">2025.9-2026.7</p>
-                                <p class="mingcheng4">Major Elective Courses</p>
+                                <p class="mingcheng4">Specialized Elective Course</p>
                                 <p class="mingcheng4">(Product Design & Development Related to Music)</p>
                             </div>
                             <div class="mengban"></div>
@@ -152,17 +164,23 @@
 
         const mdb1 = document.querySelector('.mdb1');
         const mdb2 = document.querySelector('.mdb2');
+        const mdb3 = document.querySelector('.mdb3');
         
         const img1 = new Image();
         const img2 = new Image();
+        const img3 = new Image();
         img1.src = 'images/octoqin.png';
         img2.src = 'images/cosmusica.png';
+        img3.src = 'images/organology.jpg';
         
         img1.onload = () => {
             mdb1.classList.add('loaded');
         };
         img2.onload = () => {
             mdb2.classList.add('loaded');
+        };
+        img3.onload = () => {
+            mdb3.classList.add('loaded');
         };
 
         fullScreenBtn.onclick = () => {
