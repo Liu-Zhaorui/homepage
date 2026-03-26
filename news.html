@@ -169,7 +169,7 @@
                         </div>
                     </a>
                     <a href="https://news.xacom.edu.cn/2025/1215/c1053a106221/page.htm" target="_blank">
-                        <div class="mdb5">
+                        <div class="mdb9">
                             <div class="mingcheng">
                                 <p class="mingcheng1">AI Contest Official Publication</p>
                                 <p class="mingcheng2">官方推文</p>
@@ -237,6 +237,7 @@
         const mdb6 = document.querySelector('.mdb6');
         const mdb7 = document.querySelector('.mdb7');
         const mdb8 = document.querySelector('.mdb8');
+        const mdb9 = document.querySelector('.mdb9');
         
         const img1 = new Image();
         const img2 = new Image();
@@ -246,6 +247,7 @@
         const img6 = new Image();
         const img7 = new Image();
         const img8 = new Image();
+        const img9 = new Image();
         img1.src = 'images/news1.png';
         img2.src = 'images/news2.jpg';
         img3.src = 'images/news3.jpg';
@@ -254,6 +256,7 @@
         img6.src = 'images/news6.png';
         img7.src = 'images/news7.png';
         img8.src = 'images/news8.png';
+        img9.src = 'images/news9.png';
         
         img1.onload = () => {
             mdb1.classList.add('loaded');
@@ -279,6 +282,10 @@
         };
         img8.onload = () => {
             mdb8.classList.add('loaded');
+            console.log("change");
+        };
+        img9.onload = () => {
+            mdb9.classList.add('loaded');
             console.log("change");
         };
 
