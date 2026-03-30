@@ -77,6 +77,54 @@
                     <h1>
                         <span>Works</span>
                     </h1>
+                    <!-- <a href="./works/livecoding.html">
+                        <div class="mdb18">
+                            <div class="mingcheng">
+                                <p class="mingcheng1">LiveCoding</p>
+                                <p class="mingcheng2">LiveCoding古谱</p>
+                                <p class="mingcheng3">2024.8--present</p>
+                                <p class="mingcheng4">LiveCoding古谱</p>
+                                <p class="mingcheng4">(LiveCoding古谱)</p>
+                            </div>
+                            <div class="mengban"></div>
+                        </div>
+                    </a> -->
+                    <!-- <a href="./works/chi-pao.html">
+                        <div class="mdb24">
+                            <div class="mingcheng">
+                                <p class="mingcheng1">Chi-Pao Sonification</p>
+                                <p class="mingcheng2">旗袍可听化装置</p>
+                                <p class="mingcheng3">2026.3-2026.5</p>
+                                <p class="mingcheng4">旗袍-音乐</p>
+                                <p class="mingcheng4">(Chi-Pao music)</p>
+                            </div>
+                            <div class="mengban"></div>
+                        </div>
+                    </a> -->
+                    <!-- <a href="./works/appleworkshop.html">
+                        <div class="mdb17">
+                            <div class="mingcheng">
+                                <p class="mingcheng1">Electronic Music Co-Creation Workshop</p>
+                                <p class="mingcheng2">电子音乐共创工作坊</p>
+                                <p class="mingcheng3">2026.4</p>
+                                <p class="mingcheng4">Electronic Music Co-Creation Workshop Based on Apple Operation System</p>
+                                <p class="mingcheng4">(基于苹果操作系统的电子音乐共创工作坊)</p>
+                            </div>
+                            <div class="mengban"></div>
+                        </div>
+                    </a> -->
+                    <a href="./works/stringsimai.html">
+                        <div class="mdb23">
+                            <div class="mingcheng">
+                                <p class="mingcheng1">String SimAI</p>
+                                <p class="mingcheng2">钢琴琴弦AI模拟仿真系统</p>
+                                <p class="mingcheng3">2026.3</p>
+                                <p class="mingcheng4">基于DeepXDE物理机器学习框架构建的钢琴专用AI虚拟仿真模型</p>
+                                <p class="mingcheng4">(AI Simulation Model for Piano Based on DeepXDE)</p>
+                            </div>
+                            <div class="mengban"></div>
+                        </div>
+                    </a>
                     <a href="./works/mrconcert.html">
                         <div class="mdb22">
                             <div class="mingcheng">
@@ -101,30 +149,6 @@
                             <div class="mengban"></div>
                         </div>
                     </a>
-                    <!-- <a href="./works/livecoding.html">
-                        <div class="mdb18">
-                            <div class="mingcheng">
-                                <p class="mingcheng1">LiveCoding</p>
-                                <p class="mingcheng2">LiveCoding古谱</p>
-                                <p class="mingcheng3">2024.8--present</p>
-                                <p class="mingcheng4">LiveCoding古谱</p>
-                                <p class="mingcheng4">(LiveCoding古谱)</p>
-                            </div>
-                            <div class="mengban"></div>
-                        </div>
-                    </a> -->
-                    <!-- <a href="./works/appleworkshop.html">
-                        <div class="mdb17">
-                            <div class="mingcheng">
-                                <p class="mingcheng1">Electronic Music Co-Creation Workshop</p>
-                                <p class="mingcheng2">电子音乐共创工作坊</p>
-                                <p class="mingcheng3">2024.11--2024.12</p>
-                                <p class="mingcheng4">Electronic Music Co-Creation Workshop Based on Apple Operation System</p>
-                                <p class="mingcheng4">(基于苹果操作系统的电子音乐共创工作坊)</p>
-                            </div>
-                            <div class="mengban"></div>
-                        </div>
-                    </a> -->
                     <a href="./works/urbansounddiary.html">
                         <div class="mdb16">
                             <div class="mingcheng">
@@ -409,6 +433,8 @@
         const mdb20 = document.querySelector('.mdb20');
         const mdb21 = document.querySelector('.mdb21');
         const mdb22 = document.querySelector('.mdb22');
+        const mdb23 = document.querySelector('.mdb23');
+        const mdb24 = document.querySelector('.mdb24');
         
         const img1 = new Image();
         const img2 = new Image();
@@ -432,6 +458,8 @@
         const img20 = new Image();
         const img21 = new Image();
         const img22 = new Image();
+        const img23 = new Image();
+        const img24 = new Image();
         img1.src = 'images/octoqin.png';
         img2.src = 'images/cosmusica.png';
         img3.src = 'images/ccmusic.jpg';
@@ -454,6 +482,8 @@
         img20.src = 'images/ago1.jpg';
         img21.src = 'images/flowingsound.png';
         img22.src = 'images/vch.png';
+        img23.src = 'images/pianoai.png';
+        img24.src = 'images/pianoai.png';
         
         img1.onload = () => {
             mdb1.classList.add('loaded');
@@ -520,6 +550,12 @@
         };
         img22.onload = () => {
             mdb22.classList.add('loaded');
+        };
+        img23.onload = () => {
+            mdb23.classList.add('loaded');
+        };
+        img24.onload = () => {
+            mdb24.classList.add('loaded');
         };
 
         fullScreenBtn.onclick = () => {
