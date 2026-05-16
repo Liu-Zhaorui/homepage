@@ -313,7 +313,7 @@ article {
 .body-container .body-overview .mdb4 .image-box .image4 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/seedling.jpg);
+    background-image: url(../images/seedling-low.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -356,7 +356,7 @@ article {
 .body-container .body-overview .mdb5 .image-box .image5 {
     height: 100%;
     width: 100%;
-    background-image: url(../images/appleworkshop-low.jpg);
+    background-image: url(../images/appleworkshop-low.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -367,7 +367,7 @@ article {
 
 .body-container .body-overview .mdb5 .image-box .image5.loaded  {
     transition: all 2.2s cubic-bezier(0.14, 0.4, 0.09, 0.99);
-    background-image: url(../images/appleworkshop.jpg);
+    background-image: url(../images/appleworkshop.png);
     filter: blur(0);
 }
 
