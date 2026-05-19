@@ -89,7 +89,7 @@
                             <p class="mingcheng3">Content: This workshop combines AI music understanding models with generative AI music tools (Suno and Gemini) to lead participants on a complete creative journey from "blind listening" to "understanding" and then to "replication". We will explore together: Can AI truly capture cultural details in ethnic music? What sound features are difficult for current models to reproduce?</p>
                             <p class="mingcheng3">Presented by Central Conservatory of Music & Xi'an Conservatory of Music & Hong Kong University of Science and Technology</p>
                             <p class="mingcheng4">
-                                <a href="./works/appleworkshop.html" target="_blank">more>></a>
+                                <a href="./works/appleworkshop.html" target="_blank" rel="noopener noreferrer">more>></a>
                             </p>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                             <p class="mingcheng3">Content: In this workshop, urban residents will explore the flowing sounds on the streets of Shenzhen, from residential alleys to art museums, from speakers to radio speakers, and feel the vitality from Shenzhen together, exploring daily life from different perspectives.</p>
                             <p class="mingcheng3">Presented by Sound Studies Group (Southern University of Science and Technology) & Pingshan Art Museum</p>
                             <p class="mingcheng4">
-                                <a href="./works/flowingsound.html" target="_blank">more>></a>
+                                <a href="./works/flowingsound.html" target="_blank" rel="noopener noreferrer">more>></a>
                             </p>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
                             <p class="mingcheng3">Content: This hands-on workshop aims to engage participants in exploring and manipulating urban sound data using the "Urban Sound Diary" app. Through practical exercises, attendees will gain an understanding of the relationship between sound, urban life, computational sound analysis, and data visualization techniques.</p>
                             <p class="mingcheng3">Presented by Chinese CHI 2024 & Southern University of Science and Technology</p>
                             <p class="mingcheng4">
-                                <a href="./works/urbansounddiary.html" target="_blank">more>></a>
+                                <a href="./works/urbansounddiary.html" target="_blank" rel="noopener noreferrer">more>></a>
                             </p>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                             <p class="mingcheng3">Content: The workshop participants will learn to build their own sound recording device and choose a custom shape for it.  These devices look like electronics, quite low tech, but they have high-tech functionality and can record, store, playback, and present sound recordings.</p>
                             <p class="mingcheng3">Presented by 龙城 CC SeeDling & Sound Studies Group (Southern University of Science and Technology)</p>
                             <p class="mingcheng4">
-                                <a href="./works/citysound.html" target="_blank">more>></a>
+                                <a href="./works/citysound.html" target="_blank" rel="noopener noreferrer">more>></a>
                             </p>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                             <p class="mingcheng3">Content: Taking the cutting-edge intersection of contemporary acoustic technology and design as the theme, Let students interact closely with top designers, scientists and scientific and technological enterprises in the context of interdisciplinary collaborative design.</p>
                             <p class="mingcheng3">Presented by ZIJIN AWARD & Nanjing University</p>
                             <p class="mingcheng4">
-                                <a href="works/heartheocean.html" target="_blank">more>></a>
+                                <a href="works/heartheocean.html" target="_blank" rel="noopener noreferrer">more>></a>
                             </p>
                         </div>
                     </div>
@@ -169,7 +169,7 @@
                             <p class="mingcheng3">Content: This workshop explores creative methods for people with disabilities in music perception, performance, and creation.</p>
                             <p class="mingcheng3">Presented by The Future Laboratory, Tsinghua University</p>
                             <p class="mingcheng4">
-                                <a href="works/cosmic-r.html" target="_blank">more>></a>
+                                <a href="works/cosmic-r.html" target="_blank" rel="noopener noreferrer">more>></a>
                             </p>
                         </div>
                     </div>
@@ -185,7 +185,7 @@
                             <p class="mingcheng3">Content: This workshop focus on the traditional musical instrument - Duxianqin, which is popular in southern Guangxi and Vietnam, and explore the innovative design of Chinese traditional instruments using digital technology. The participants' work revolves around the shape design of musical instruments, sound synthesis, sensor data collection, interaction design, and other aspects.</p>
                             <p class="mingcheng3">Presented by Central Conservatory of Music & Queen Mary University of London, Media Art Technology</p>
                             <p class="mingcheng4">
-                                <a href="./works/octoqin.html" target="_blank">more>></a>
+                                <a href="./works/octoqin.html" target="_blank" rel="noopener noreferrer">more>></a>
                             </p>
                         </div>
                     </div>
@@ -222,7 +222,7 @@
                                 <a href="mailto:378976087@qq.com" class="social4"></a>
                             </li>
                             <li>
-                                <a href="https://github.com/Liu-Zhaorui/homepage" target="_blank"
+                                <a href="https://github.com/Liu-Zhaorui/homepage" target="_blank" rel="noopener noreferrer"
                                     class="social5"></a>
                             </li>
                         </ul>
@@ -283,17 +283,35 @@
             mdb7.classList.add('loaded');
         };
 
-        fullScreenBtn.onclick = () => {
-          html.requestFullscreen()
-            .then(() => {
-              console.log('');
-            })
-            .catch(() => {
-              console.log('');
-            })
+                if (fullScreenBtn) {
+          const FULLSCREEN_INTENT_KEY = 'fullscreen-intent';
+
+          const requestPageFullscreen = async () => {
+            sessionStorage.setItem(FULLSCREEN_INTENT_KEY, '1');
+            await document.documentElement.requestFullscreen();
+          };
+
+          const exitPageFullscreen = async () => {
+            sessionStorage.setItem(FULLSCREEN_INTENT_KEY, '0');
+            await document.exitFullscreen();
+          };
+
+          fullScreenBtn.addEventListener('click', async () => {
+            try {
+              if (document.fullscreenElement) {
+                await exitPageFullscreen();
+              } else {
+                await requestPageFullscreen();
+              }
+            } catch (_error) {
+            }
+          });
+
+          if (sessionStorage.getItem(FULLSCREEN_INTENT_KEY) === '1' && !document.fullscreenElement) {
+            requestPageFullscreen().catch(() => {})
+          }
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

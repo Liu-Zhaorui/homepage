@@ -137,7 +137,7 @@
                             <p class="mingcheng1">A modern and absurdist recreation of the traditional Chinese Duxianqin</p>
                             <p class="mingcheng2">The Octoqin is a modern and absurdist recreation of the Chinese traditional musical instrument -- Duxianqin, one-stringed instrument, created to test the boundaries of what one can consider an instrument, and what one can consider a duxianqin. Using cutting-edge sound synthesis, etextiles and a plush octopus, the Octoqin is made and played here at the Central Conservatory of Music, Beijing, China.</p>
                             <p class="mingcheng4">
-                                <a href="https://mat.qmul.ac.uk/projects/octoqin" target="_blank">more>></a>
+                                <a href="https://mat.qmul.ac.uk/projects/octoqin" target="_blank" rel="noopener noreferrer">more>></a>
                             </p>
                         </div>
                         <div class="image-box">
@@ -151,7 +151,7 @@
                         <div class="mingcheng">
                             <p class="mingcheng2">The Octoqin is made from an Octopusshaped doll, with six cloth pressure sensors sewn inside six of the legs to map to the six overtone positions on the string of a traditional Duxianqin. When the legs of the Octoqin are squeezed a recording of the note from a traditional Duxianqin is played by Bela with strength of squeeze mapped to volume. Movement of the Octoqin's head modifies pitch of the note produced, much like the joystick in the traditional Duxianqin.</p>
                             <p class="mingcheng4" style="padding-top: 80px;">
-                                <a href="https://bela.io/" target="_blank">more about Bela>></a>
+                                <a href="https://bela.io/" target="_blank" rel="noopener noreferrer">more about Bela>></a>
                             </p>
                         </div>
                     </div>
@@ -172,7 +172,7 @@
                                 Bryan-Kinns N, Li Z. ReImagining: cross-cultural co-creation of a Chinese traditional musical instrument with digital technologies[J]. In NIME’20, 2020: 1-6.
                             </p>
                             <p class="mingcheng3">
-                                <a href="https://www.nime.org/proceedings/2020/nime2020_paper75.pdf" target="_blank">PDF</a>
+                                <a href="https://www.nime.org/proceedings/2020/nime2020_paper75.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
                             </p>
                         </div>
                         <div style="width:40%;height:100%;padding:0;position:relative;">
@@ -233,7 +233,7 @@
                                 <a href="mailto:378976087@qq.com" class="social4"></a>
                             </li>
                             <li>
-                                <a href="https://github.com/Liu-Zhaorui/homepage" target="_blank"
+                                <a href="https://github.com/Liu-Zhaorui/homepage" target="_blank" rel="noopener noreferrer"
                                     class="social5"></a>
                             </li>
                         </ul>
@@ -248,17 +248,35 @@
     <script>
         const html = document.querySelector('html');
         const fullScreenBtn = document.getElementById('full-screen-btn');
-        fullScreenBtn.onclick = () => {
-          html.requestFullscreen()
-            .then(() => {
-              console.log('');
-            })
-            .catch(() => {
-              console.log('');
-            })
+                if (fullScreenBtn) {
+          const FULLSCREEN_INTENT_KEY = 'fullscreen-intent';
+
+          const requestPageFullscreen = async () => {
+            sessionStorage.setItem(FULLSCREEN_INTENT_KEY, '1');
+            await document.documentElement.requestFullscreen();
+          };
+
+          const exitPageFullscreen = async () => {
+            sessionStorage.setItem(FULLSCREEN_INTENT_KEY, '0');
+            await document.exitFullscreen();
+          };
+
+          fullScreenBtn.addEventListener('click', async () => {
+            try {
+              if (document.fullscreenElement) {
+                await exitPageFullscreen();
+              } else {
+                await requestPageFullscreen();
+              }
+            } catch (_error) {
+            }
+          });
+
+          if (sessionStorage.getItem(FULLSCREEN_INTENT_KEY) === '1' && !document.fullscreenElement) {
+            requestPageFullscreen().catch(() => {})
+          }
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

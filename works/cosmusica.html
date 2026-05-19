@@ -296,10 +296,10 @@
                         <div class="mingcheng" style="margin: 50px 0; width: 85%;">
                             <p class="mingcheng1">Related Papers</p>
                             <p class="mingcheng2">
-                                <a href="https://nime.pubpub.org/pub/h6cgd7v4/draft?access=cix6qaf5" target="_blank"> [ 1 ] Liu Z, Cui C, Qiu Y, et al. Cosmusica: a Digital Musical Instrument for Interacting with the Universe[C]//International Conference on New Interfaces for Musical Expression. 2022. https://doi.org/10.21428/92fbeb44.45b606a6</a>
+                                <a href="https://nime.pubpub.org/pub/h6cgd7v4/draft?access=cix6qaf5" target="_blank" rel="noopener noreferrer"> [ 1 ] Liu Z, Cui C, Qiu Y, et al. Cosmusica: a Digital Musical Instrument for Interacting with the Universe[C]//International Conference on New Interfaces for Musical Expression. 2022. https://doi.org/10.21428/92fbeb44.45b606a6</a>
                             </p>
                             <p class="mingcheng2">
-                                <a href="https://appfa2023.silsystem.solutions/atti/000935.pdf" target="_blank"> [ 2 ] Liu Z, Qiu Y, Cui C, Shi D, Li Z. Cosmusica: a Digital Musical Instrument for Interacting with the Universe[C]//Forum Acusticum, Torino, Italy, 2023.</a>
+                                <a href="https://appfa2023.silsystem.solutions/atti/000935.pdf" target="_blank" rel="noopener noreferrer"> [ 2 ] Liu Z, Qiu Y, Cui C, Shi D, Li Z. Cosmusica: a Digital Musical Instrument for Interacting with the Universe[C]//Forum Acusticum, Torino, Italy, 2023.</a>
                             </p>
                         </div>
                     </div>
@@ -321,16 +321,16 @@
                         <div class="mingcheng" style="margin: 50px 0; width: 85%;">
                             <p class="mingcheng1">Related News</p>
                             <p class="mingcheng2">
-                                <a href="https://w.yangshipin.cn/video?type=0&vid=p000002mapx" target="_blank">"THE QUEST FOR SPACE" -- China Global Television Network, 中国国际电视台, 2021.9.18</a>
+                                <a href="https://w.yangshipin.cn/video?type=0&vid=p000002mapx" target="_blank" rel="noopener noreferrer">"THE QUEST FOR SPACE" -- China Global Television Network, 中国国际电视台, 2021.9.18</a>
                             </p>
                             <p class="mingcheng2">
-                                <a href="https://app.cctv.com/special/m/livevod/index.html?vtype=2&guid=7d7f7010a3d14008a0366c9abe2411da&vsetId=C10616" target="_blank">Interview -- China Central Television, 中国中央电视台, 2021.12.9</a>
+                                <a href="https://app.cctv.com/special/m/livevod/index.html?vtype=2&guid=7d7f7010a3d14008a0366c9abe2411da&vsetId=C10616" target="_blank" rel="noopener noreferrer">Interview -- China Central Television, 中国中央电视台, 2021.12.9</a>
                             </p>
                             <p class="mingcheng2">
-                                <a href="https://w.yangshipin.cn/video?type=0&vid=h000062oxtf&ptag=4_1.8.0.21678_wxf" target="_blank">"2021 China Story" -- China Central Television, 中国中央电视台, 2022.1.4</a>
+                                <a href="https://w.yangshipin.cn/video?type=0&vid=h000062oxtf&ptag=4_1.8.0.21678_wxf" target="_blank" rel="noopener noreferrer">"2021 China Story" -- China Central Television, 中国中央电视台, 2022.1.4</a>
                             </p>
                             <p class="mingcheng2">
-                                <a href="https://mp.weixin.qq.com/s/z_GOBKKP47XdqE5oS88J0g" target="_blank">"Cosmusica launch into space" -- 寰无界 Cosinfinity, 2023.12.17</a>
+                                <a href="https://mp.weixin.qq.com/s/z_GOBKKP47XdqE5oS88J0g" target="_blank" rel="noopener noreferrer">"Cosmusica launch into space" -- 寰无界 Cosinfinity, 2023.12.17</a>
                             </p>
                         </div>
                     </div>
@@ -387,7 +387,7 @@
                                 <a href="mailto:378976087@qq.com" class="social4"></a>
                             </li>
                             <li>
-                                <a href="https://github.com/Liu-Zhaorui/homepage" target="_blank"
+                                <a href="https://github.com/Liu-Zhaorui/homepage" target="_blank" rel="noopener noreferrer"
                                     class="social5"></a>
                             </li>
                         </ul>
@@ -402,17 +402,35 @@
     <script>
         const html = document.querySelector('html');
         const fullScreenBtn = document.getElementById('full-screen-btn');
-        fullScreenBtn.onclick = () => {
-          html.requestFullscreen()
-            .then(() => {
-              console.log('');
-            })
-            .catch(() => {
-              console.log('');
-            })
+                if (fullScreenBtn) {
+          const FULLSCREEN_INTENT_KEY = 'fullscreen-intent';
+
+          const requestPageFullscreen = async () => {
+            sessionStorage.setItem(FULLSCREEN_INTENT_KEY, '1');
+            await document.documentElement.requestFullscreen();
+          };
+
+          const exitPageFullscreen = async () => {
+            sessionStorage.setItem(FULLSCREEN_INTENT_KEY, '0');
+            await document.exitFullscreen();
+          };
+
+          fullScreenBtn.addEventListener('click', async () => {
+            try {
+              if (document.fullscreenElement) {
+                await exitPageFullscreen();
+              } else {
+                await requestPageFullscreen();
+              }
+            } catch (_error) {
+            }
+          });
+
+          if (sessionStorage.getItem(FULLSCREEN_INTENT_KEY) === '1' && !document.fullscreenElement) {
+            requestPageFullscreen().catch(() => {})
+          }
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -77,7 +77,7 @@
                     <h1>
                         <span>News</span>
                     </h1>
-                    <a href="https://news.xacom.edu.cn/2025/1215/c1053a106221/page.htm" target="_blank">
+                    <a href="https://news.xacom.edu.cn/2025/1215/c1053a106221/page.htm" target="_blank" rel="noopener noreferrer">
                         <div class="mdb9">
                             <div class="mingcheng">
                                 <p class="mingcheng1">AI Contest Official Publication</p>
@@ -89,7 +89,7 @@
                             <div class="mengban"></div>
                         </div>
                     </a>
-                    <a href="https://mp.weixin.qq.com/s/XQieIwnUr-Gau-RyJCjavg" target="_blank">
+                    <a href="https://mp.weixin.qq.com/s/XQieIwnUr-Gau-RyJCjavg" target="_blank" rel="noopener noreferrer">
                         <div class="mdb8">
                             <div class="mingcheng">
                                 <p class="mingcheng1">2024 Wuhan Biennale Official Publication</p>
@@ -100,7 +100,7 @@
                             <div class="mengban"></div>
                         </div>
                     </a>
-                    <a href="https://mp.weixin.qq.com/s/z_GOBKKP47XdqE5oS88J0g" target="_blank">
+                    <a href="https://mp.weixin.qq.com/s/z_GOBKKP47XdqE5oS88J0g" target="_blank" rel="noopener noreferrer">
                         <div class="mdb7">
                             <div class="mingcheng">
                                 <p class="mingcheng1">Cosmusica Launch into Space</p>
@@ -111,7 +111,7 @@
                             <div class="mengban"></div>
                         </div>
                     </a>
-                    <a href="https://www.bilibili.com/video/BV1Hc411f72Y/?share_source=copy_web&vd_source=2c4e9cfd90b61f83c7dcf590cbf01efa" target="_blank">
+                    <a href="https://www.bilibili.com/video/BV1Hc411f72Y/?share_source=copy_web&vd_source=2c4e9cfd90b61f83c7dcf590cbf01efa" target="_blank" rel="noopener noreferrer">
                         <div class="mdb6">
                             <div class="mingcheng">
                                 <p class="mingcheng1">Promotional Film (headphone)</p>
@@ -122,7 +122,7 @@
                             <div class="mengban"></div>
                         </div>
                     </a>
-                    <a href="https://mp.weixin.qq.com/s/wS_Kkg3-X86RGgUjVc8uug" target="_blank">
+                    <a href="https://mp.weixin.qq.com/s/wS_Kkg3-X86RGgUjVc8uug" target="_blank" rel="noopener noreferrer">
                         <div class="mdb5">
                             <div class="mingcheng">
                                 <p class="mingcheng1">Exclusive Interview (School)</p>
@@ -134,7 +134,7 @@
                             <div class="mengban"></div>
                         </div>
                     </a>
-                    <a href="https://bcaf.org.cn/26964085" target="_blank">
+                    <a href="https://bcaf.org.cn/26964085" target="_blank" rel="noopener noreferrer">
                         <div class="mdb4">
                             <div class="mingcheng">
                                 <p class="mingcheng1">Exclusive Interview</p>
@@ -146,7 +146,7 @@
                             <div class="mengban"></div>
                         </div>
                     </a>
-                    <a href="https://w.yangshipin.cn/video?type=0&vid=h000062oxtf&ptag=4_1.8.0.21678_wxf" target="_blank">
+                    <a href="https://w.yangshipin.cn/video?type=0&vid=h000062oxtf&ptag=4_1.8.0.21678_wxf" target="_blank" rel="noopener noreferrer">
                         <div class="mdb3">
                             <div class="mingcheng">
                                 <p class="mingcheng1">Interview</p>
@@ -157,7 +157,7 @@
                             <div class="mengban"></div>
                         </div>
                     </a>
-                    <a href="https://app.cctv.com/special/m/livevod/index.html?vtype=2&guid=7d7f7010a3d14008a0366c9abe2411da&vsetId=C10616" target="_blank">
+                    <a href="https://app.cctv.com/special/m/livevod/index.html?vtype=2&guid=7d7f7010a3d14008a0366c9abe2411da&vsetId=C10616" target="_blank" rel="noopener noreferrer">
                         <div class="mdb2">
                             <div class="mingcheng">
                                 <p class="mingcheng1">Interview</p>
@@ -168,7 +168,7 @@
                             <div class="mengban"></div>
                         </div>
                     </a>
-                    <a href="https://w.yangshipin.cn/video?type=0&vid=p000002mapx" target="_blank">
+                    <a href="https://w.yangshipin.cn/video?type=0&vid=p000002mapx" target="_blank" rel="noopener noreferrer">
                         <div class="mdb1">
                             <div class="mingcheng">
                                 <p class="mingcheng1">Interview</p>
@@ -213,7 +213,7 @@
                                 <a href="mailto:378976087@qq.com" class="social4"></a>
                             </li>
                             <li>
-                                <a href="https://github.com/Liu-Zhaorui/homepage" target="_blank"
+                                <a href="https://github.com/Liu-Zhaorui/homepage" target="_blank" rel="noopener noreferrer"
                                     class="social5"></a>
                             </li>
                         </ul>
@@ -289,18 +289,35 @@
             console.log("change");
         };
 
-        fullScreenBtn.onclick = () => {
-          html.requestFullscreen()
-            .then(() => {
-              console.log('');
-            })
-            .catch(() => {
-              console.log('');
-            })
+                if (fullScreenBtn) {
+          const FULLSCREEN_INTENT_KEY = 'fullscreen-intent';
+
+          const requestPageFullscreen = async () => {
+            sessionStorage.setItem(FULLSCREEN_INTENT_KEY, '1');
+            await document.documentElement.requestFullscreen();
+          };
+
+          const exitPageFullscreen = async () => {
+            sessionStorage.setItem(FULLSCREEN_INTENT_KEY, '0');
+            await document.exitFullscreen();
+          };
+
+          fullScreenBtn.addEventListener('click', async () => {
+            try {
+              if (document.fullscreenElement) {
+                await exitPageFullscreen();
+              } else {
+                await requestPageFullscreen();
+              }
+            } catch (_error) {
+            }
+          });
+
+          if (sessionStorage.getItem(FULLSCREEN_INTENT_KEY) === '1' && !document.fullscreenElement) {
+            requestPageFullscreen().catch(() => {})
+          }
         }
     </script>
-      
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

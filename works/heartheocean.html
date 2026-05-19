@@ -192,10 +192,10 @@
                         <div class="mingcheng" style="margin-top: 50px; width: 85%;">
                             <p class="mingcheng1">Related Papers</p>
                             <p class="mingcheng2">
-                                <a href="https://appfa2023.silsystem.solutions/atti/000682.pdf" target="_blank">Jin, X., Liu, Z., Shao, X., Li, H. & Li, Z. Self-adaptive Mixing System for Spatial Audio in Virtual Reality.[C]//Forum Acusticum, Torino, Italy, 2023.</a>
+                                <a href="https://appfa2023.silsystem.solutions/atti/000682.pdf" target="_blank" rel="noopener noreferrer">Jin, X., Liu, Z., Shao, X., Li, H. & Li, Z. Self-adaptive Mixing System for Spatial Audio in Virtual Reality.[C]//Forum Acusticum, Torino, Italy, 2023.</a>
                             </p>
                             <p class="mingcheng2">
-                                <a href="https://doi.org/10.1145/3565698.3587398" target="_blank">Xingyu Lai, Zhaorui Liu, Xiyao Jin, Xiaorong Shao, Borou Yu, Jiajian Min, Mengying Zeng, Shuting Chen, Qiao Liang, Yi Ji, Pengcheng An, and Xueliang Li. Multi-sensory Interaction for Meditation.[C]//Proceedings of the Tenth International Symposium of Chinese CHI (Chinese CHI'22), Association for Computing Machinery, New York, NY, USA, 328–336.</a>
+                                <a href="https://doi.org/10.1145/3565698.3587398" target="_blank" rel="noopener noreferrer">Xingyu Lai, Zhaorui Liu, Xiyao Jin, Xiaorong Shao, Borou Yu, Jiajian Min, Mengying Zeng, Shuting Chen, Qiao Liang, Yi Ji, Pengcheng An, and Xueliang Li. Multi-sensory Interaction for Meditation.[C]//Proceedings of the Tenth International Symposium of Chinese CHI (Chinese CHI'22), Association for Computing Machinery, New York, NY, USA, 328–336.</a>
                             </p>
                         </div>
                     </div>
@@ -260,7 +260,7 @@
                                 <a href="mailto:378976087@qq.com" class="social4"></a>
                             </li>
                             <li>
-                                <a href="https://github.com/Liu-Zhaorui/homepage" target="_blank"
+                                <a href="https://github.com/Liu-Zhaorui/homepage" target="_blank" rel="noopener noreferrer"
                                     class="social5"></a>
                             </li>
                         </ul>
@@ -275,17 +275,35 @@
     <script>
         const html = document.querySelector('html');
         const fullScreenBtn = document.getElementById('full-screen-btn');
-        fullScreenBtn.onclick = () => {
-          html.requestFullscreen()
-            .then(() => {
-              console.log('');
-            })
-            .catch(() => {
-              console.log('');
-            })
+                if (fullScreenBtn) {
+          const FULLSCREEN_INTENT_KEY = 'fullscreen-intent';
+
+          const requestPageFullscreen = async () => {
+            sessionStorage.setItem(FULLSCREEN_INTENT_KEY, '1');
+            await document.documentElement.requestFullscreen();
+          };
+
+          const exitPageFullscreen = async () => {
+            sessionStorage.setItem(FULLSCREEN_INTENT_KEY, '0');
+            await document.exitFullscreen();
+          };
+
+          fullScreenBtn.addEventListener('click', async () => {
+            try {
+              if (document.fullscreenElement) {
+                await exitPageFullscreen();
+              } else {
+                await requestPageFullscreen();
+              }
+            } catch (_error) {
+            }
+          });
+
+          if (sessionStorage.getItem(FULLSCREEN_INTENT_KEY) === '1' && !document.fullscreenElement) {
+            requestPageFullscreen().catch(() => {})
+          }
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./js/heartheocean-audio.js"></script>
 </body>
