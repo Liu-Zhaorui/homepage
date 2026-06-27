@@ -77,6 +77,18 @@
                     <h1>
                         <span>Live</span>
                     </h1>
+                    <div class="mdb8">
+                        <div class="image-box">
+                            <div class="image8"></div>
+                        </div>
+                        <div class="mingcheng">
+                            <p class="mingcheng1">琴之构，声之形：结构-声音-艺术表达融合实践音乐会</p>
+                            <p class="mingcheng2">The Structure of Qin, the Shape of Sound -- A Practical Concert of Structure Sound Art Expression Integration</p>
+                            <p class="mingcheng3">Date: JUN 29, 2026</p>
+                            <p class="mingcheng3">Place: Xi'an Zhuque, Xi'an</p>
+                            <p class="mingcheng3">Presented by School of Contemporary Music, Xi'an Conservatory of Music</p>
+                        </div>
+                    </div>
                     <div class="mdb7">
                         <div class="image-box">
                             <div class="image7"></div>
@@ -236,7 +248,8 @@
         const mdb5 = document.querySelector('.image5');
         const mdb6 = document.querySelector('.image6');
         const mdb7 = document.querySelector('.image7');
-        
+        const mdb8 = document.querySelector('.image8');
+
         const img1 = new Image();
         const img2 = new Image();
         const img3 = new Image();
@@ -244,6 +257,7 @@
         const img5 = new Image();
         const img6 = new Image();
         const img7 = new Image();
+        const img8 = new Image();
         img1.src = 'images/concert.jpg';
         img2.src = 'images/cosmicr.JPG';
         img3.src = 'works/materials/cosmicr3.png';
@@ -251,7 +265,8 @@
         img5.src = 'images/ECHOESOFEXISTENCE.jpg';
         img6.src = 'images/ShanghaiTheatreAcademy.jpg';
         img7.src = 'images/kaist.jpg';
-        
+        img8.src = 'images/gouxing.png';
+
         img1.onload = () => {
             mdb1.classList.add('loaded');
         };
@@ -272,6 +287,12 @@
         };
         img7.onload = () => {
             mdb7.classList.add('loaded');
+        };
+        img7.onload = () => {
+            mdb7.classList.add('loaded');
+        };
+        img8.onload = () => {
+            mdb8.classList.add('loaded');
         };
 
                 if (fullScreenBtn) {
